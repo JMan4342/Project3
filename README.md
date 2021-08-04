@@ -18,6 +18,9 @@ Empty
 
 * [Questions](#questions)
 
+* [Technologies](#technologies)
+
+* [Authors](#authors)
 ---
 
 ## License
@@ -30,10 +33,30 @@ Empty
 
 ## Usage
 
-
+See the deployed version here! [Deployed link](####)
 
 ![image](./public/assets/favicon.ico)
 
+## Technologies 
+
+
+* React 
+
+* GraphQL
+
+* MongoDB
+
+* Mongoose ODM 
+
+* Heroku 
+
+* Material-UI
+
+* Javascript
+
+* Node.js
+
+* Express
 
 ## Credits
 
@@ -41,10 +64,16 @@ Empty
 
 ## Questions
 
-If you feel you have any questions, please feel free to reach out to me at stonge.ms@gmail.com
+If you feel you have any questions, please feel free to reach out to us at stonge.ms@gmail.com
+or Miguellozano@gmail.com
 
-## Author's
-Matthew St. Onge
-Joseph Manning
-Miguel Lozano
-Chris Hart
+## Authors
+
+
+* Matthew St. Onge
+
+* Joseph Manning
+
+* Miguel Lozano
+
+* Chris Hart
