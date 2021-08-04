@@ -15,7 +15,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <Navigation title={"Matthew St. Onge"} />
+        <Navigation title={"Wander Beyond"} />
         <Suspense fallback={<div>Loading...</div>}>
           <div style={{padding: '4% 6%'}}>
           <Switch>

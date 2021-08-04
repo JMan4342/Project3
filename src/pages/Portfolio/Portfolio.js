@@ -12,7 +12,7 @@ export default function Portfolio() {
   return (
     <div>
       {/* <Hero title="Portfolio" subtitle="Here" /> */}
-      <h1>Portfolio</h1>
+      <h1>Camping</h1>
       <div className={styles.card_container}>
         <div className={styles.cards}>
           <Card title="Camp Fire" image={img1} link="https://unsplash.com/s/photos/camping"/>
