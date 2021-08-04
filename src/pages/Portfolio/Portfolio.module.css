@@ -1,0 +1,13 @@
+.card_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.cards {
+    width: 23%;
+    padding: 5%   
+}
