@@ -1,0 +1,13 @@
+:root {
+    font-family:'Gowun Dodum', sans-serif;
+}
+
+body {
+    background-color: 	#E7ECEF;
+    width: 100vw;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
