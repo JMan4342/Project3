@@ -3,36 +3,36 @@ import Card from "../../components/Card/Card";
 import styles from "./Portfolio.module.css";
 
 export default function Portfolio() {
-    const img1 = { src: "./assets/code-quiz1.png", alt: "Code Quiz"};
-    const img2 = { src: "./assets/Employee-Management-System.png", alt: "Code Quiz"};
-    const img3 = { src: "./assets/hwSnipOOP.png", alt: "Code Quiz"};
-    const img4 = { src: "./assets/passWordGen.png", alt: "Code Quiz"};
-    const img5 = { src: "./assets/portReadme1.png", alt: "Code Quiz"};
-    const img6 = { src: "./assets/pSky1.png", alt: "Code Quiz"};
+    const img1 = { src: "./assets/fireLg.jpg", alt: "Fire Log"};
+    const img2 = { src: "./assets/hikerLg.jpg", alt: "Hiker"};
+    const img3 = { src: "./assets/mapLg.jpg", alt: "Map"};
+    const img4 = { src: "./assets/vwLg.jpg", alt: "VW Bus"};
+    const img5 = { src: "./assets/nightSkyLg.jpg", alt: "Night Sky"};
+    const img6 = { src: "./assets/tentLg.jpg", alt: "Tent"};
   return (
     <div>
       {/* <Hero title="Portfolio" subtitle="Here" /> */}
       <h1>Portfolio</h1>
       <div className={styles.card_container}>
         <div className={styles.cards}>
-          <Card title="Phoenix Sky" image={img6} link="https://github.com/stongems/PhoenixSky"/>
+          <Card title="Camp Fire" image={img1} link="https://unsplash.com/s/photos/camping"/>
         </div>
         <div className={styles.cards}>
-          <Card title="Employee Management System" image={img2} link="https://github.com/stongems/employee-management-system"/>
+          <Card title="Hiking" image={img2} link="https://unsplash.com/s/photos/camping"/>
         </div>
         <div className={styles.cards}>
-          <Card title="Password Generator" image={img4} link="https://github.com/stongems/password-generator" />
+          <Card title="Map" image={img3} link="https://unsplash.com/s/photos/camping" />
         </div>
       </div>
       <div className={styles.card_container}>
         <div className={styles.cards}  >
-          <Card title="Coding Quiz" image={img1} link="https://github.com/stongems/code_quiz"/>
+          <Card title="VW Bus" image={img4} link="https://unsplash.com/s/photos/camping"/>
         </div>
         <div className={styles.cards} >
-          <Card title="Object Oriented Programing" image={img3} link="https://github.com/stongems/OOP-Profile-Generator"/>
+          <Card title="Night Sky" image={img5} link="https://unsplash.com/s/photos/camping"/>
         </div>
         <div className={styles.cards}>
-          <Card title="Portfolio 2.0" image={img5} link="https://github.com/stongems/Portfolio-2.0"/>
+          <Card title="Tent Camping" image={img6} link="https://unsplash.com/s/photos/camping"/>
         </div>
       </div>
     </div>

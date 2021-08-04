@@ -3,12 +3,13 @@ import Hero from "../../components/Hero/Hero";
 
 export default function About() {
     const image = {
-        src: './assets/jennAndI.jpg',
-        alt: 'Jenn and I'
+        src: './assets/reading.jpg',
+        alt: 'missing img'
     }
     return (
         <div>
-            <Hero title="About Me" subtitle="I have a wealth of experience working with people on advanced multi-million dollar platforms in high stress, high tempo environments. I rely on my on my experienced trouble shooting, problem solving, and communication to ensure the mission is always accomplished on time. I am able to do this by constantly developing a utility-belt consisting of: Teamwork and communication, detailed notes, strong fundamentals, decision making, creativity, and resilience. I do my best work with enthusiastic people under stressful situations. My mantra is Lead by example and learn something new everyday." image={image} />
+            <Hero title="Camping" subtitle="Welcome to the second week of Project 3! You’ve been working hard on your group project during the past week, collaborating with your fellow developers and creating a real-world MERN stack single-page application that you can showcase to potential employers. This week you will continue to work on your group project to create an interactive full-stack MERN application.
+At the end of this week, your group will present the application to your classmates. Because this is a large-scale web application, you should consider concentrating on specific aspects of the project in your presentation, following the principle of the separation of concerns. Though each individual should be able to speak about their own contributions, this is still a group project. Be sure to emphasize how the different parts of your application came together and how you worked as a group!" image={image} />
         </div>
     )
 }
