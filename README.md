@@ -60,7 +60,7 @@ See the deployed version here! [Deployed link](####)
 
 [Figma][1]
 
-[1]:  "Wander Beyond Wireframe"
+[1]:  https://www.figma.com/file/ctNGVwtaGKrwc4JGDYAyn3/Wander-Beyond?node-id=0%3A1 "Wander Beyond Wireframe"
 
 ---
 
@@ -81,7 +81,10 @@ See the deployed version here! [Deployed link](####)
 
 ## **TaskBreakdown**
 
-- 
+- React frontend: Miguel
+- Scalable MongoDB: Joseph and Matthew
+- GraphQL API: Joseph and Matthew
+- Express.js and Node.js: Joseph and Matthew
 
 ---
 
