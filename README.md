@@ -3,6 +3,22 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+
+## **Table of Contents**
+
+* [Usage](#usage)
+
+* [Wireframe](#wireframe)
+
+* [Technology](#technology)
+
+* [TaskBreakdown](#taskbreakdown)
+
+* [Questions](#questions)
+
+* [Authors](#authors)
+
+
 ## **Project Description**
 
 To build a website that allows the user to plan a camping trip to a national park.
@@ -28,32 +44,7 @@ To build a website that allows the user to plan a camping trip to a national par
 
 ---
 
-## **Table of Contents**
 
-
-  * We can add another option to our Apollo Server configuration called `context`, which is a lot like middleware in Express.
-
-  * This will allow us to intercept any request to the server and check if there's a valid JWT before the request gets to the resolver.
-
-* Open [auth.js](server/utils/auth.js) and explain the `authMiddleware` function:
-
-
-<!-- * [Credits](#credits) -->
-
-
-  * We use the `return` statement to return the `req` object, either modified with user data or not modified at all, and the request will continue to go to its intended resolver function.
-
-* Open [resolvers.js](server/schemas/resolvers.js) and explain the following:
-
-  * Any time we need to implement authentication on a query or mutation, we can add a third parameter called `context` to the resolver function.
-
-
-## License
-
-[MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
- 
-
-  * If there is a `user` property, we can assume the user's token has been verified and the `user` property now holds data about the user that we stored in the token itself.
 
 ---
 
@@ -61,7 +52,7 @@ To build a website that allows the user to plan a camping trip to a national par
 
 See the deployed version here! [Deployed link](####)
 
-![image](./public/assets/favicon.ico)
+![image](client\public\favicon.ico)
 
 ---
 
@@ -73,7 +64,7 @@ See the deployed version here! [Deployed link](####)
 
 ---
 
-## **Technology to be used**
+## **Technology**
 
 - React for frontend
 - Javascript
@@ -88,7 +79,7 @@ See the deployed version here! [Deployed link](####)
 
 ---
 
-## **Task Breakdown**
+## **TaskBreakdown**
 
 - 
 
@@ -108,4 +99,6 @@ or Miguellozano@gmail.com
 * Joseph Manning
 
 * Miguel Lozano
+
+* Chris Hart
 
