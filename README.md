@@ -1,3 +1,4 @@
+
 # **Wander Beyond**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -29,27 +30,30 @@ To build a website that allows the user to plan a camping trip to a national par
 
 ## **Table of Contents**
 
-* [License](#license)
 
-* [Installation](#installation)
+  * We can add another option to our Apollo Server configuration called `context`, which is a lot like middleware in Express.
 
-* [Usage](#usage)
+  * This will allow us to intercept any request to the server and check if there's a valid JWT before the request gets to the resolver.
+
+* Open [auth.js](server/utils/auth.js) and explain the `authMiddleware` function:
+
 
 <!-- * [Credits](#credits) -->
 
-* [Questions](#questions)
 
-* [Technologies](#technologies)
+  * We use the `return` statement to return the `req` object, either modified with user data or not modified at all, and the request will continue to go to its intended resolver function.
 
-* [Authors](#authors)
----
+* Open [resolvers.js](server/schemas/resolvers.js) and explain the following:
+
+  * Any time we need to implement authentication on a query or mutation, we can add a third parameter called `context` to the resolver function.
+
 
 ## License
 
 [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+ 
 
-## Installation
-
+  * If there is a `user` property, we can assume the user's token has been verified and the `user` property now holds data about the user that we stored in the token itself.
 
 ---
 
