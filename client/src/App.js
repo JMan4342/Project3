@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter , Route, Switch} from 'react-router-dom';
 
 import Home from './pages/Home';
 import DashBoard from './pages/Dashboard';
@@ -15,7 +15,7 @@ import Camping from './pages/Camping';
 import Parks from './pages/Parks';
 import Supplies from './pages/Supplies';
 import Hiking from './pages/Hiking';
-import Navbar from './pages/NavBar';
+import NavBar from './pages/NavBar';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -41,29 +41,18 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-            <Route exact path="/me">
-              <Profile />
-            </Route>
-            <Route exact path="/profiles/:profileId">
-              <Profile />
-            </Route>
-          </div>
-          <Footer />
-        </div>
-      </Router>
+      <BrowserRouter>
+        <NavBar />    
+        <Switch>
+           <Route component={Home} path='/' exact />
+           <Route component={DashBoard} path='/dashboard' exact />
+           <Route component={Register} path='/register' exact />
+           <Route component={Camping} path='/camping' exact />
+           <Route component={Parks} path='/parks' exact />
+           <Route component={Supplies} path='/supplies' exact />
+           <Route component={Hiking} path='/hiking' exact />
+           </Switch>
+      </BrowserRouter>
     </ApolloProvider>
   );
 }
