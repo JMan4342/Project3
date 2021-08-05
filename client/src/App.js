@@ -1,21 +1,17 @@
-import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import React, { Component, Suspense, lazy } from "react";
+import {ApolloClient,InMemoryCache,ApolloProvider,createHttpLink,} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter , Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Navigation from './components/Navbar/NavBar';
+import Footer from "./components/Footer/Footer";
 
-import Home from './pages/Home';
-import DashBoard from './pages/Dashboard';
-import Register from './pages/Register';
-import Camping from './pages/Camping';
-import Parks from './pages/Parks';
-import Supplies from './pages/Supplies';
-import Hiking from './pages/Hiking';
-import NavBar from './pages/NavBar';
+const Home = lazy(() => import("./pages/Home"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Register = lazy(() => import("./pages/Register"));
+const Camping = lazy(() => import("./pages/Camping"));
+const Parks = lazy(() => import("./pages/Parks"));
+const Supplies = lazy(() => import("./pages/Supplies"));
+const Hiking = lazy(() => import("./pages/Hiking"));
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,23 +34,30 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
-  return (
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <NavBar />    
-        <Switch>
-           <Route component={Home} path='/' exact />
-           <Route component={DashBoard} path='/dashboard' exact />
-           <Route component={Register} path='/register' exact />
-           <Route component={Camping} path='/camping' exact />
-           <Route component={Parks} path='/parks' exact />
-           <Route component={Supplies} path='/supplies' exact />
-           <Route component={Hiking} path='/hiking' exact />
+export default class App extends Component {
+  obj = { name: "bottom" };
+  render() {
+    return (
+      <ApolloProvider client={client}>
+      <Router>
+        <Navigation title={"Wander Beyond"} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <div style={{padding: '4% 6%'}}>
+          <Switch>
+           <Route path='/'><Home /></Route>
+           <Route path='/dashboard'><Dashboard /></Route>
+           <Route path='/register'><Register /></Route>
+           <Route path='/camping'><Camping /></Route>
+           <Route path='/parks'><Parks /></Route>
+           <Route path='/supplies'><Supplies /></Route>
+           <Route path='/hiking'><Hiking /></Route>
            </Switch>
-      </BrowserRouter>
-    </ApolloProvider>
-  );
+          </div>
+        </Suspense>
+        <Footer />
+      </Router>
+      </ApolloProvider>
+    );
+  }
 }
 
-export default App;
