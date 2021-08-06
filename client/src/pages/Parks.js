@@ -48,9 +48,16 @@ export default function Parks() {
       {results.length
         ? results.map((res) => {
             return (
+<<<<<<< HEAD
               <div>
                 <h1>{res.name}</h1>
               </div>
+=======
+              <>
+                <h1>{data.parks[0].parkCode}</h1>
+                {/* <p>{data.parks}</p> */}
+              </>
+>>>>>>> cb39305da35c1e581e39ea51b1435c71947b2c2d
             );
           })
         : "no results found"}
