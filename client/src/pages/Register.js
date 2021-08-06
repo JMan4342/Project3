@@ -46,6 +46,7 @@ const Signup = () => {
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
           <div className="card-body">
+            
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -96,6 +97,7 @@ const Signup = () => {
         </div>
       </div>
     </main>
+    
   );
 };
 
