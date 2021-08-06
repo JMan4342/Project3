@@ -14,7 +14,7 @@ export default function Parks() {
         setResults(res.data);
       });
   }
-  
+
   return (
     <main>
       Key word:
@@ -30,6 +30,7 @@ export default function Parks() {
             return (
               <>
                 <h1>{data.parks[0].parkCode}</h1>
+                {/* <p>{data.parks}</p> */}
               </>
             );
           })
