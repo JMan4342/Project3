@@ -17,18 +17,10 @@ export default function Parks() {
 
     try {
       const response = await getParks(searchTerm);
-      setResults(response.data)
-      console.log(results);
+      setResults(response.data);
       if (!response) {
         throw new Error("something went wrong!");
       }
-
-      // const { data } = await response.json();
-
-      // const parkData = data.map((park) => ({
-      //   name: park.name,
-      // }));
-      // setResults(parkData);
       setSearchTerm("");
     } catch (err) {
       console.error(err);
