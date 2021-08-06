@@ -20,19 +20,15 @@ const Profile = () => {
       variables: { profileId: profileId },
     }
   );
-
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
   const profile = data?.me || data?.profile || {};
-
   // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
     return <Redirect to="/me" />;
   }
-
   if (loading) {
     return <div>Loading...</div>;
   }
-
   if (!profile?.name) {
     return (
       <h4>
@@ -41,7 +37,6 @@ const Profile = () => {
       </h4>
     );
   }
-
   return (
     <div>
       <h2 className="card-header">
@@ -62,5 +57,4 @@ const Profile = () => {
     </div>
   );
 };
-
 export default Profile;

@@ -1,9 +1,10 @@
 import React, { Component, Suspense, lazy } from "react";
-import {ApolloClient,InMemoryCache,ApolloProvider,createHttpLink,} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Navigation from './components/Navbar/NavBar';
+
 import Footer from "./components/Footer/Footer";
+import NavBar from "./components/Navbar/NavBar";
 
 const Home = lazy(() => import("./pages/Home"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -40,23 +41,23 @@ export default class App extends Component {
     return (
       <ApolloProvider client={client}>
       <Router>
-        <Navigation title={"Wander Beyond"} />
+        <NavBar title={"Wander Beyond"} />
         <Suspense fallback={<div>Loading...</div>}>
           <div style={{padding: '4% 6%'}}>
           <Switch>
-           <Route path='/'><Home /></Route>
-           <Route path='/dashboard'><Dashboard /></Route>
-           <Route path='/register'><Register /></Route>
-           <Route path='/camping'><Camping /></Route>
-           <Route path='/parks'><Parks /></Route>
-           <Route path='/supplies'><Supplies /></Route>
-           <Route path='/hiking'><Hiking /></Route>
+           <Route exact path='/'><Home /></Route>
+           <Route exact path='/dashboard'><Dashboard /></Route>
+           <Route exact path='/register'><Register /></Route>
+           <Route exact path='/camping'><Camping /></Route>
+           <Route exact path='/parks'><Parks /></Route>
+           <Route exact path='/supplies'><Supplies /></Route>
+           <Route exact path='/hiking'><Hiking /></Route>
            </Switch>
           </div>
         </Suspense>
         <Footer />
       </Router>
-      </ApolloProvider>
+    </ApolloProvider>
     );
   }
 }
