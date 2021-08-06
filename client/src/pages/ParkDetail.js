@@ -12,8 +12,6 @@ export default function ParkDetail(props) {
     // retrieving the alerts for our specific park
     getAlerts(params.parkCode).then(({ data }) => setAlerts(data));
   }, []);
-  console.log(park);
-  console.log(alerts);
 
   if (!park) {
     return <h1>Loading Park Data....</h1>;
