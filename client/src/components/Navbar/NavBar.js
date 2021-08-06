@@ -7,7 +7,7 @@ export default function NavBar() {
       <div>
         <nav>
           Wander Beyond
-          <NavLink to="/dashboard">BaseCamp|</NavLink>
+          <NavLink to="/register">BaseCamp|</NavLink>
           <NavLink to="/camping">Camping|</NavLink>
           <NavLink to="/hiking">Hiking|</NavLink>
           <NavLink to="/supplies">Supplies</NavLink>

@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import getParks from "../utils/api";
 
+export default function Parks() {
+  const [searchTerm, setSearchTerm] = useState("");
 
-export default function parks() {
-    return (
-       <main></main>
-    )
+  const [results, setResults] = useState([]);
+
+  function handleSubmit(event) {
+    //  console.log(searchTerm)
+    getParks(searchTerm)
+      .then((response) => response.json())
+      .then((res) => {
+        setResults(res.data);
+      });
+  }
+  
+  return (
+    <main>
+      Key word:
+      <input
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
+      />
+      <button onClick={handleSubmit}>Search</button>
+      {console.log(results)}
+      {results.length > 0
+        ? results.map((data) => {
+            return (
+              <>
+                <h1>{data.parks[0].parkCode}</h1>
+              </>
+            );
+          })
+        : "no results found"}
+    </main>
+  );
 }
