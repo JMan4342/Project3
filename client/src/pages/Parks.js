@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { getParks } from "../utils/api";
 import { getAlerts } from "../utils/api";
 
@@ -41,7 +42,9 @@ export default function Parks() {
         ? results.map((res) => {
             return (
               <div>
-                <h1>{res.name}</h1>
+                <Link to={`/parks/${res.parkCode}`}>
+                  <h1>{res.name}</h1>
+                </Link>
               </div>
             );
           })

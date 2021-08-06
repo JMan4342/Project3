@@ -2,6 +2,10 @@ export async function getParks(searchTerm) {
   const data = await fetch(`/parks?q=${searchTerm}`);
   return data.json();
 }
+export async function getParkByCode(parkCode) {
+  const data = await fetch(`/parks?parkCode=${parkCode}`);
+  return data.json();
+}
 
 export async function getAlerts(parkCode) {
   const data = await fetch(`/alerts?q=${parkCode}`);

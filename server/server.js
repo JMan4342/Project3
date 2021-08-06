@@ -27,8 +27,7 @@ app.use(express.json());
 const { getParks, getAlerts } = require("./utils/api");
 
 app.get("/parks", async function (req, res) {
-  console.log(req.query);
-  res.json(await getParks(req.query.q));
+  res.json(await getParks(req.query));
 });
 
 app.get("/alerts", async function (req, res) {
