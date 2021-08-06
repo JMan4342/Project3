@@ -36,6 +36,7 @@ const client = new ApolloClient({
 });
 
 export default class App extends Component {
+  
   obj = { name: "bottom" };
   render() {
     return (
