@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { getParks } from "../utils/api";
 import { getAlerts } from "../utils/api";
 
@@ -17,18 +18,10 @@ export default function Parks() {
 
     try {
       const response = await getParks(searchTerm);
-      setResults(response.data)
-      console.log(results);
+      setResults(response.data);
       if (!response) {
         throw new Error("something went wrong!");
       }
-
-      // const { data } = await response.json();
-
-      // const parkData = data.map((park) => ({
-      //   name: park.name,
-      // }));
-      // setResults(parkData);
       setSearchTerm("");
     } catch (err) {
       console.error(err);
@@ -49,7 +42,9 @@ export default function Parks() {
         ? results.map((res) => {
             return (
               <div>
-                <h1>{res.name}</h1>
+                <Link to={`/parks/${res.parkCode}`}>
+                  <h1>{res.name}</h1>
+                </Link>
               </div>
             );
           })
