@@ -16,3 +16,8 @@ export async function getActivities(searchTerm) {
   const data = await fetch(`/thingstodo?q=${searchTerm}`);
   return data.json();
 }
+
+export async function getActivityByCode(id) {
+  const data = await fetch(`/thingstodo?id=${id}`);
+  return data.json();
+}

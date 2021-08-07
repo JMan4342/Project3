@@ -19,6 +19,7 @@ const Parks = lazy(() => import("./pages/Parks"));
 const ParkDetail = lazy(() => import("./pages/ParkDetail"));
 const Supplies = lazy(() => import("./pages/Supplies"));
 const Hiking = lazy(() => import("./pages/Hiking"));
+const ActivityDetail = lazy(() => import("./pages/ActivityDetail"));
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -74,6 +75,9 @@ export default class App extends Component {
                 </Route>
                 <Route exact path="/hiking">
                   <Hiking />
+                </Route>
+                <Route exact path="/thingstodo/:id">
+                  <ActivityDetail />
                 </Route>
                 <Route exact path="/home">
                   <Home />
