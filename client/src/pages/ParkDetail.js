@@ -21,7 +21,7 @@ export default function ParkDetail(props) {
     <>
       <h1>{park.fullName}</h1>
       <p>{park.description}</p>
-      <img src={park.images[0].url} alt={park.images[0].altText} />
+      <img src={park.images ? park.images[0]?.url:""} alt={park.images ? park.images[0]?.altText:""} />
     </>
   );
 }
