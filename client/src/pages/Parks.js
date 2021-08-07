@@ -29,6 +29,9 @@ export default function Parks() {
   };
 
   return (
+    <div style={{
+      backgroundImage: `url(/parks.jpg)`, height:"80vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
+    }}>
     <main>
       Key word:
       <input
@@ -50,5 +53,6 @@ export default function Parks() {
           })
         : "no results found"}
     </main>
+    </div>
   );
 }
