@@ -21,7 +21,7 @@ export default function NavBar() {
           <a class="nav-link" href="/camping">Camping</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/hiking">Hiking</a>
+          <a class="nav-link" href="/hiking">Activities</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/parks">Parks</a>

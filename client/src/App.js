@@ -15,6 +15,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Register = lazy(() => import("./pages/Register"));
 const Camping = lazy(() => import("./pages/Camping"));
+const CampingDetail = lazy(() => import("./pages/CampingDetails"));
 const Parks = lazy(() => import("./pages/Parks"));
 const ParkDetail = lazy(() => import("./pages/ParkDetail"));
 const Supplies = lazy(() => import("./pages/Supplies"));
@@ -63,6 +64,9 @@ export default class App extends Component {
                 </Route>
                 <Route exact path="/camping">
                   <Camping />
+                </Route>
+                <Route exact path="/campgrounds/:id">
+                  <CampingDetail />
                 </Route>
                 <Route exact path="/parks">
                   <Parks />
