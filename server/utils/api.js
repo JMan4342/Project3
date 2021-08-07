@@ -1,4 +1,5 @@
 const axios = require("axios");
+require("dotenv").config()
 
 const { NPS_API_KEY } = process.env;
 

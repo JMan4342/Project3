@@ -49,7 +49,7 @@ export default class App extends Component {
         <Router>
           <NavBar title={"Wander Beyond"} />
           <Suspense fallback={<div>Loading...</div>}>
-            <div style={{ padding: "4% 6%" }}>
+            {/* <div style={{ padding: "4% 6%" }}> */}
               <Switch>
                 <Route exact path="/">
                   <Home />
@@ -75,8 +75,11 @@ export default class App extends Component {
                 <Route exact path="/hiking">
                   <Hiking />
                 </Route>
+                <Route exact path="/home">
+                  <Home />
+                </Route>
               </Switch>
-            </div>
+            {/* </div> */}
           </Suspense>
           <Footer />
         </Router>

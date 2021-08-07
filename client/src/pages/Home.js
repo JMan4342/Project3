@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
+
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -41,15 +42,18 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    <div style={{
+      backgroundImage: `url(/nightSkyLg.jpg)`, height:"100vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
+    }}>
+    <main className="row justify-center mb-4 ">
+      <div className="col-6 mt-5 mb-5">
+        <div className="card bg-success">
+          <h4 className="text-center h3 mb-1 mt-2 fw-normal">Login to Basecamp</h4>
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                Success! You may now {' '}
+                <Link to="/dashboard">Head back to base camp</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -70,7 +74,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="btn btn-block btn-dark"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -88,6 +92,7 @@ const Login = (props) => {
         </div>
       </div>
     </main>
+    </div>
   );
 };
 
