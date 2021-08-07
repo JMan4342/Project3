@@ -21,7 +21,9 @@ export default function ParkDetail(props) {
     <>
       <h1>{park.fullName}</h1>
       <p>{park.description}</p>
+    
       <img src={ park.images ? park.images[0].url : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png"} alt={park.images ? park.images[0].altText : "no image"} />
+
     </>
   );
 }
