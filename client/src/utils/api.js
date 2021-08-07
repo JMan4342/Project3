@@ -9,6 +9,10 @@ export async function getParkByCode(parkCode) {
 
 export async function getAlerts(parkCode) {
   const data = await fetch(`/alerts?q=${parkCode}`);
+  return data.json();
+}
 
+export async function getActivities(searchTerm) {
+  const data = await fetch(`/thingstodo?q=${searchTerm}`);
   return data.json();
 }
