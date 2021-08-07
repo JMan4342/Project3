@@ -21,3 +21,13 @@ export async function getActivityByCode(id) {
   const data = await fetch(`/thingstodo?id=${id}`);
   return data.json();
 }
+
+export async function getCampgrounds(searchTerm) {
+  const data = await fetch(`/campgrounds?q=${searchTerm}`);
+  return data.json();
+}
+
+export async function getCampgroundsById(id) {
+  const data = await fetch(`/campgrounds?id=${id}`);
+  return data.json();
+}

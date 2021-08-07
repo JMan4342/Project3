@@ -29,30 +29,35 @@ export default function Parks() {
   };
 
   return (
-    <div style={{
-      backgroundImage: `url(/parks.jpg)`, height:"80vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
-    }}>
-    <main>
-      Key word:
-      <input
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <button onClick={handleSubmit}>Search</button>
-      {console.log(results)}
-      {results.length
-        ? results.map((res) => {
-            return (
-              <div>
-                <Link to={`/parks/${res.parkCode}`}>
-                  <h1>{res.name}</h1>
-                </Link>
-              </div>
-            );
-          })
-        : "no results found"}
-    </main>
+    <div
+      style={{
+        backgroundImage: `url(/parks.jpg)`,
+        height: "80vh",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <main>
+        Key word:
+        <input
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }}
+        />
+        <button onClick={handleSubmit}>Search</button>
+        {console.log(results)}
+        {results.length
+          ? results.map((res) => {
+              return (
+                <div>
+                  <Link to={`/parks/${res.parkCode}`}>
+                    <h1>{res.name}</h1>
+                  </Link>
+                </div>
+              );
+            })
+          : "no results found"}
+      </main>
     </div>
   );
 }
