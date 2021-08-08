@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Font1;
+    src: url(sansation_light.woff);
+  }
+  
 .bg-success {
     background-color: #243119!important;
     color:white;
@@ -14,5 +19,46 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-light {
 }
 .navbar-light .navbar-brand {
     color: #C9F2C7;
+    
+}
+/* affects the spacing of the nav bar items from each other*/
+.nav-link {
+    margin-right: 5px;
+  
+}
+/* Affects the color of the nav bar items*/
+.navbar-light .navbar-nav .nav-link {
+    font-family: font1;
+    font-size: 22px;
+    color: #1add82;
 }
 
+/* This is the styling that affects that navbar items to be spaced out from the wander beyond text*/
+.navbar-expand-sm .navbar-collapse { 
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: space-evenly;
+}
+
+/* This gradient affects the wander beyon text on navbar*/
+a:not([href]):not([tabindex]) {
+    font-family: font1;
+    font-size: 30px;
+    background: -webkit-linear-gradient(rgb(57, 121, 75),rgb(74, 221, 45));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+/*custom gradient I made for footer background */
+.gradient {
+    background: linear-gradient(#000000 , #09243b
+    );
+
+}
+/* Wander Beyond text on footer */
+.custom-green {
+    font-family: font1;
+    font-size: 30px;
+    background: -webkit-linear-gradient(rgb(25, 53, 33), rgb(44, 136, 25));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
