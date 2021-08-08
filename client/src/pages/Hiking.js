@@ -28,6 +28,14 @@ export default function Activities() {
     };
   
     return (
+      <div
+      style={{
+        backgroundImage: `url(/Waterfall.jpg)`,
+        height: "80vh",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <main>
         Key word:
         <input
@@ -50,5 +58,6 @@ export default function Activities() {
             })
           : "no results found"}
       </main>
+    </div>
     );
   }
