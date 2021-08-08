@@ -27,6 +27,14 @@ export default function Campgrounds() {
   };
 
   return (
+    <div
+    style={{
+      backgroundImage: `url(/tent1.jpg)`,
+      height: "80vh",
+      backgroundSize: "100% 100%",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
     <div>
       <main>
         Key word:
@@ -50,5 +58,6 @@ export default function Campgrounds() {
           : "no results found"}
       </main>
     </div>
+  </div>
   );
 }

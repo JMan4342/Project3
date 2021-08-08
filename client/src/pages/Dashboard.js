@@ -38,6 +38,14 @@ const Profile = () => {
     );
   }
   return (
+    <div
+    style={{
+      backgroundImage: `url(/parks.jpg)`,
+      height: "80vh",
+      backgroundSize: "100% 100%",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
     <div>
       <h2 className="card-header">
         {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
@@ -55,6 +63,7 @@ const Profile = () => {
         <SkillForm profileId={profile._id} />
       </div>
     </div>
+  </div>
   );
 };
 export default Profile;
