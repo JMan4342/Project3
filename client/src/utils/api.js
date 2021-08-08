@@ -31,3 +31,14 @@ export async function getCampgroundsById(id) {
   const data = await fetch(`/campgrounds?id=${id}`);
   return data.json();
 }
+
+export const savePark = (parkData, token) => {
+  return fetch('/api/users', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(parkData),
+  });
+};
