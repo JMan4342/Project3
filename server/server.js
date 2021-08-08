@@ -41,6 +41,11 @@ app.get("/thingstodo", async function (req, res) {
   res.json(await getActivities(req.query.q));
 });
 
+app.get("/camping", async function (req, res) {
+  console.log(req.query);
+  res.json(await getActivities(req.query.q));
+});
+
 
 // MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 

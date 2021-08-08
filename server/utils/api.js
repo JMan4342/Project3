@@ -26,6 +26,8 @@ async function getActivities(query) {
   return data;
 }
 
+
+
 module.exports = {
   getParks,
   getAlerts,
