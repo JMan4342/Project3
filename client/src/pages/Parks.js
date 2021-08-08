@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getParks } from "../utils/api";
+import { getParks, savePark } from "../utils/api";
 import { getAlerts } from "../utils/api";
+import { saveParkCodes, getSavedParkCodes } from "../utils/localStorage";
+import Auth from '../utils/auth'
 
 export default function Parks() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [results, setResults] = useState([]);
+  const [savedParkCodes, setSavedParkCodes] = useState(getSavedParkCodes());
+
+  useEffect(() => {
+    return () => saveParkCodes(savedParkCodes);
+  });
 
   const handleSubmit = async (event) => {
     //  console.log(searchTerm)
@@ -23,6 +30,26 @@ export default function Parks() {
         throw new Error("something went wrong!");
       }
       setSearchTerm("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleSavePark = async (parkCode) => {
+    const parkToSave = results.find((park) => park.parkCode === parkCode);
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      return false;
+    }
+    try {
+      const response = await savePark(parkToSave, token);
+
+      if(!response.ok) {
+        throw new Error('something went wrong?');
+      }
+
+      setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
     } catch (err) {
       console.error(err);
     }
@@ -53,6 +80,7 @@ export default function Parks() {
                   <Link to={`/parks/${res.parkCode}`}>
                     <h1>{res.name}</h1>
                   </Link>
+                  <button onClick={handleSavePark}>Save</button>;
                 </div>
               );
             })
