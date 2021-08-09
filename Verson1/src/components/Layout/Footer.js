@@ -6,7 +6,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <p>UofA Coding bootcamp</p>
           <a className={styles.icon} href="https://github.com/stongems" target="_blank">
-        <i class="fab fa-facebook-square fa-2x"></i></a>
+        <i className="fab fa-facebook-square fa-2x"></i></a>
     </div>
   );
 }
