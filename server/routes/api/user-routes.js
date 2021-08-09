@@ -35,7 +35,7 @@ module.exports = router;
 
 // MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 
-const { getParks, getAlerts, getActivities, getCampgrounds } = require("./utils/api");
+const { getParks, getAlerts, getActivities, getCampgrounds } = require("../../utils/api");
 
 app.get("/parks", async function (req, res) {
   res.json(await getParks(req.query));

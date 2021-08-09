@@ -52,7 +52,7 @@ const Signup = () => {
      <main className="row justify-center mb-4 ">
       <div className="col-6 mt-5 mb-5">
         <div className="card bg-success">
-          <h4 className="text-center h3 mb-1 mt-2 fw-normal">Register to use Basecamp</h4>
+          <h4 className="font4 text-center h3 mb-1 mt-2 fw-normal">Register to use Basecamp</h4>
           <div className="card-body">
               {data ? (
                 <p>
@@ -62,7 +62,7 @@ const Signup = () => {
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
-                    className="form-input"
+                    className="font4 form-input"
                     placeholder="Your username"
                     name="name"
                     type="text"
@@ -70,7 +70,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="font4 form-input"
                     placeholder="Your email"
                     name="email"
                     type="email"
@@ -78,7 +78,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="font4 form-input"
                     placeholder="******"
                     name="password"
                     type="password"
@@ -86,7 +86,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <button
-                    className="btn btn-block btn-dark"
+                    className="font4 btn btn-block btn-dark"
                     style={{ cursor: "pointer" }}
                     type="submit"
                   >
