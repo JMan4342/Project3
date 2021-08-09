@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { getCampgrounds } from "../utils/api";
+// import { getCampgrounds } from "../utils/api";
 //  import { getAlerts } from "../utils/api";
 // =============================================
 // ==DEVELOPING  CAMPING ROUTE === BROKEN==
