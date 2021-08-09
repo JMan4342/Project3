@@ -22,7 +22,7 @@ export default function NavBar() {
           <ul class="navbar-nav ">
             {/* <li class="nav-item">
         This was a DOUBLE ROUTE for HOME 
-          <a class="nav-link active" aria-current="page" href="#"></a>
+          <a className="nav-link active" aria-current="page" href="#"></a>
         </li> */}
             <li class="nav-item">
               <a class="nav-link" href="/parks">
@@ -58,19 +58,19 @@ export default function NavBar() {
         </div>
       </div>
     </nav>
-
-    // <header>
-    //   <div>
-    //     <nav>
-    //       Wander Beyond
-    //       <NavLink to="/dashboard">BaseCamp |</NavLink>
-    //       <NavLink to="/camping">Camping |</NavLink>
-    //       <NavLink to="/hiking">Hiking |</NavLink>
-    //       <NavLink to="/Parks">Parks |</NavLink>
-    //       <NavLink to="/register">Register |</NavLink>
-    //       <NavLink to="/home">Home</NavLink>
-    //     </nav>
-    //   </div>
-    // </header>
   );
 }
+
+// <header>
+//   <div>
+//     <nav>
+//       Wander Beyond
+//       <NavLink to="/dashboard">BaseCamp |</NavLink>
+//       <NavLink to="/camping">Camping |</NavLink>
+//       <NavLink to="/hiking">Hiking |</NavLink>
+//       <NavLink to="/Parks">Parks |</NavLink>
+//       <NavLink to="/register">Register |</NavLink>
+//       <NavLink to="/home">Home</NavLink>
+//     </nav>
+//   </div>
+// </header>
