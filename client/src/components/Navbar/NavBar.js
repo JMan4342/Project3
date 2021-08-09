@@ -17,13 +17,13 @@ export default function NavBar() {
           <a class="nav-link active" aria-current="page" href="#"></a>
         </li> */}
         <li class="nav-item">
-          <a class="nav-link" href="/camping">Camping</a>
+          <a class="nav-link" href="/parks">Parks</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/hiking">Hiking</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/parks">Parks</a>
+          <a class="nav-link" href="/camping">Camping</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/login">Login|</a>
