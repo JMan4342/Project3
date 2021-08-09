@@ -12,16 +12,16 @@ export async function getAlerts(parkCode) {
   return data.json();
 }
 
-export async function getActivities(searchTerm) {
+export async function getThingsToDo(searchTerm) {
   const data = await fetch(`/thingstodo?q=${searchTerm}`);
   return data.json();
 }
 
-export async function getActivityByCode(id) {
+export async function getThingsToDoByCode(id) {
   const data = await fetch(`/thingstodo?id=${id}`);
   return data.json();
 }
-// +++++++OR NAMED AS getCamping
+
 export async function getCampgrounds(searchTerm) {
   const data = await fetch(`/campgrounds?q=${searchTerm}`);
   return data.json();

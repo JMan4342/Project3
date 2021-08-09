@@ -18,7 +18,7 @@ async function getAlerts(parkCode) {
   return data;
 }
 
-async function getActivities(query) {
+async function getThingsToDo(query) {
   const params = new URLSearchParams(query).toString();
   const { data } = await axios.get(
     `https://developer.nps.gov/api/v1/thingstodo?q=${params}&limit=50&start=0&sort=&api_key=${NPS_API_KEY}`
@@ -46,6 +46,6 @@ async function getCampgrounds(query) {
 module.exports = {
   getParks,
   getAlerts,
-  getActivities,
+  getThingsToDo,
   getCampgrounds,
 };

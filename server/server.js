@@ -25,7 +25,7 @@ app.use(express.json());
 
 // MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 
-const { getParks, getAlerts, getActivities, getCamping } = require("./utils/api");
+const { getParks, getAlerts, getThingsToDo, getCampgrounds } = require("./utils/api");
 
 app.get("/parks", async function (req, res) {
   res.json(await getParks(req.query));
@@ -38,12 +38,12 @@ app.get("/alerts", async function (req, res) {
 
 app.get("/thingstodo", async function (req, res) {
   console.log(req.query);
-  res.json(await getActivities(req.query.q));
+  res.json(await getThingsToDo(req.query.q));
 });
 
 app.get("/camping", async function (req, res) {
   console.log(req.query);
-  res.json(await getActivities(req.query.q));
+  res.json(await getCampgrounds(req.query.q));
 });
 
 

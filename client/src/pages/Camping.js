@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { getCamping } from "../utils/api";
+import { getCampgrounds } from "../utils/api";
 //  import { getAlerts } from "../utils/api";
 // =============================================
 // ==DEVELOPING  CAMPING ROUTE === BROKEN==
@@ -20,7 +20,7 @@ export default function Camping() {
     }
 
     try {
-      const response = await getCamping(searchTerm);
+      // const response = await getCamping(searchTerm);
       const response = await getCampgrounds(searchTerm);
       setResults(response.data);
       if (!response) {
@@ -55,8 +55,8 @@ export default function Camping() {
             ? results.map((res) => {
                 return (
                   <div>
-                    <Link to={`/camping/${res.data}`}></Link>{" "}
-                    <Link to={`campgrounds/${res.id}`}>
+                    {/* <Link to={`/camping/${res.data}`}></Link>{" "} */}
+                    <Link to={`/campgrounds/${res.id}`}>
                       <h1>{res.name}</h1>
                     </Link>
                   </div>
