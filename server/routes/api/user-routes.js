@@ -31,3 +31,30 @@ router.route('/thingsToDo/:id').delete(authMiddleware, deleteActivity);
 router.route('/campgrounds/:id').delete(authMiddleware, deleteCampground);
 
 module.exports = router;
+
+
+// MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
+
+const { getParks, getAlerts, getActivities, getCampgrounds } = require("./utils/api");
+
+app.get("/parks", async function (req, res) {
+  res.json(await getParks(req.query));
+});
+
+app.get("/alerts", async function (req, res) {
+  console.log(req.query);
+  res.json(await getAlerts(req.query.q));
+});
+
+app.get("/thingstodo", async function (req, res) {
+  console.log(req.query);
+  res.json(await getActivities(req.query.q));
+});
+
+app.get("/campgrounds", async function (req, res) {
+  console.log(req.query);
+  res.json(await getCampgrounds(req.query.q));
+})
+
+
+// MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
