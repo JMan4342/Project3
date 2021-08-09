@@ -6,9 +6,14 @@ body {
     font-family: Font1;
 }
 /*custom class I put fonts with */
-.customFont1 {
-    font-family: Font1;
-
+.font2 {
+    font-family: 'Permanent Marker', cursive;
+}
+.font3 {
+    font-family: 'Pacifico', cursive;
+}
+.font4 {
+    font-family: 'Kalam', cursive;
 }
 .bg-success {
     background-color: #243119!important;
@@ -35,9 +40,9 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-light {
 }
 /* Affects the color of the nav bar items*/
 .navbar-light .navbar-nav .nav-link {
-    font-family: Font1;
+    font-family: 'Permanent Marker', cursive;
     font-size: 22px;
-    color: #1add82;
+    color: #caecba;
 }
 
 /* This is the styling that affects that navbar items to be spaced out from the wander beyond text*/
@@ -49,9 +54,9 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-light {
 
 /* This gradient affects the wander beyond text on navbar*/
 a:not([href]):not([tabindex]) {
-    font-family: Font1;
-    font-size: 30px;
-    background: -webkit-linear-gradient(rgb(57, 121, 75),rgb(74, 221, 45));
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    background: url("./img/tree13.jpg");
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -63,7 +68,7 @@ a:not([href]):not([tabindex]) {
 }
 /* Wander Beyond text on footer */
 .custom-green {
-    font-family: Font1;
+    font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     background: -webkit-linear-gradient(rgb(25, 53, 33), rgb(44, 136, 25));
     -webkit-background-clip: text;
@@ -71,15 +76,28 @@ a:not([href]):not([tabindex]) {
   }
 /*gradient I add to text for blue text */
 .custom-blue {
-    font-family: Font1;
+    font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     background: -webkit-linear-gradient(rgb(122, 162, 196), #7689f8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.custom-gray {
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    background: -webkit-linear-gradient(rgb(117, 118, 119), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.custom-black {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 img {
-    background-color: rgba(86, 106, 216, 0.363);
     display: block;
     max-width: 100%;
     height: 40px;
