@@ -97,7 +97,7 @@ a:not([href]):not([tabindex]) {
     -webkit-text-fill-color: transparent;
 }
 
-img {
+.tentImage {
     display: block;
     max-width: 100%;
     height: 40px;

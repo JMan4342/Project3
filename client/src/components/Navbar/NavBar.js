@@ -6,7 +6,7 @@ export default function NavBar() {
 <nav className="navbar navbar-expand-sm navbar-light bg-light  ">
   <div className="container-fluid">
     <a className="navbar-brand" >Wander Beyond</a>
-    <img
+    <img class="tentImage"
                 src={tentImage}
                 alt="css shield"
                
@@ -32,10 +32,10 @@ export default function NavBar() {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="/login">Login|</a>
+          <a className="nav-link" href="/login">Login</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/register">|Register </a>
+          <a className="nav-link" href="/register">Register </a>
 
         </li>
         <li className="nav-item">
