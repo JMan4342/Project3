@@ -52,7 +52,7 @@ To build a website that allows the user to plan a camping trip to a national par
 
 See the deployed version here! [Deployed link](####)
 
-![image](./client/public/favicon.ico)
+![image](./client/public/img/favicon.ico)
 
 ---
 

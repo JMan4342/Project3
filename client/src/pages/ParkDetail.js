@@ -18,7 +18,9 @@ export default function ParkDetail(props) {
   }
 
   return (
+    
     <>
+ 
       <h1>{park.fullName}</h1>
       <p>{park.description}</p>
 
@@ -33,3 +35,13 @@ export default function ParkDetail(props) {
     </>
   );
 }
+
+//    {/* THIS IMAGE CONFLICTS WITH THE API IMG */}
+// {/* <div
+//       style={{
+//         backgroundImage: `url(/img/hiking.jpg)`,
+//         height: "80vh",
+//         backgroundSize: "100% 100%",
+//         backgroundRepeat: "no-repeat",
+//       }}
+//     > */}

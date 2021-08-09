@@ -14,10 +14,12 @@ export default function Navigation({ title }) {
             <Link to="/">{title}</Link>
           </li>
           <li className={styles.navbar__spacer}></li>
-          <li className={styles.navbar__li}><Link to="/about">Home</Link></li>
+          <li className={styles.navbar__li}><Link to="/login">Login</Link></li>
           <li className={styles.navbar__li}><Link to="/portfolio">Camping</Link></li>
           <li className={styles.navbar__li}><Link to="/contact">Hiking</Link></li>
           <li className={styles.navbar__li}><Link to="/resume">Supplies</Link></li>
+          <li className={styles.navbar__li}><Link to="/about">About</Link></li>
+
         </ul>
       </nav>
     </div>
