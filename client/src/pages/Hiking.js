@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { getActivities } from "../utils/api";
+import { getThingsToDo } from "../utils/api";
 
 export default function Activities() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,7 +16,7 @@ export default function Activities() {
     }
 
     try {
-      const response = await getActivities(searchTerm);
+      const response = await getThingsToDo(searchTerm);
       setResults(response.data);
       if (!response) {
         throw new Error("something went wrong!");

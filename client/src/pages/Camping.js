@@ -55,8 +55,8 @@ export default function Camping() {
             ? results.map((res) => {
                 return (
                   <div>
-                    <Link to={`/camping/${res.data}`}></Link>{" "}
-                    <Link to={`campgrounds/${res.id}`}>
+                    {/* <Link to={`/camping/${res.data}`}></Link>{" "} */}
+                    <Link to={`/campgrounds/${res.id}`}>
                       <h1>{res.name}</h1>
                     </Link>
                   </div>

@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getActivityByCode } from "../utils/api";
+import { getThingsToDoByCode } from "../utils/api";
 
-export default function ActivityDetail(props) {
+export default function ThingsToDoDetail(props) {
   const params = useParams();
   const [thingsToDo, setThingsToDo] = useState({});
   console.log(params)
   useEffect(() => {
-    getActivityByCode(params.id).then(({ data }) => setThingsToDo(data[0]));
+    getThingsToDoByCode(params.id).then(({ data }) => setThingsToDo(data[0]));
   });
 
   if (!thingsToDo) {

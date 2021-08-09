@@ -14,30 +14,32 @@ export default function NavBar() {
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon "></span>
     </button>
-    <div class="collapse navbar-collapse ml-auto" id="navbarNav">
-      <ul class="navbar-nav ">
+    <div className="collapse navbar-collapse ml-auto" id="navbarNav">
+      <ul className="navbar-nav ">
 
-        {/* <li class="nav-item">
+        {/* <li className="nav-item">
         This was a DOUBLE ROUTE for HOME 
-          <a class="nav-link active" aria-current="page" href="#"></a>
+          <a className="nav-link active" aria-current="page" href="#"></a>
         </li> */}
-        <li class="nav-item">
-          <a class="nav-link" href="/parks">Parks</a>
+        <li className="nav-item">
+          <a className="nav-link" href="/parks">Parks</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hiking">Hiking</a>
+        <li className="nav-item">
+          <a className="nav-link" href="/hiking">Hiking</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/camping">Camping</a>
+        <li className="nav-item">
+          <a className="nav-link" href="/camping">Camping</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+
+        <li className="nav-item">
+          <a className="nav-link" href="/login">Login|</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/register">Register </a>
+        <li className="nav-item">
+          <a className="nav-link" href="/register">|Register </a>
+
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/dashboard">Basecamp</a>
+        <li className="nav-item">
+          <a className="nav-link" href="/dashboard">Basecamp</a>
         </li>
        
       </ul>
