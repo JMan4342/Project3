@@ -3,8 +3,10 @@ import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import SkillsList from '../components/SkillsList';
-import SkillForm from '../components/SkillForm';
+import ParksList from '../components/ParksList';
+import ThingsToDoList from '../components/ThingsToDoList';
+import CampgroundList from '../components/CampgroundList';
+// import SkillForm from '../components/SkillForm';
 
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 
@@ -44,16 +46,28 @@ const Profile = () => {
         skills...
       </h2>
 
-      {profile.skills?.length > 0 && (
-        <SkillsList
-          skills={profile.skills}
+      {profile.parks?.length > 0 && (
+        <ParksList
+          parks={profile.parks}
+          isLoggedInUser={!profileId && true}
+        />
+      )}
+      {profile.thingsToDos?.length > 0 && (
+        <ThingsToDoList
+          thingsToDos={profile.thingsToDos}
+          isLoggedInUser={!profileId && true}
+        />
+      )}
+      {profile.campgrounds?.length > 0 && (
+        <CampgroundList
+          campgrounds={profile.campgrounds}
           isLoggedInUser={!profileId && true}
         />
       )}
 
-      <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      {/* <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <SkillForm profileId={profile._id} />
-      </div>
+      </div> */}
     </div>
   );
 };
