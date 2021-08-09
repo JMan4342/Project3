@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import { Redirect, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { Redirect, useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
 
-import ParksList from '../components/ParksList';
-import ThingsToDoList from '../components/ThingsToDoList';
-import CampgroundList from '../components/CampgroundList';
+import ParksList from "../components/ParksList";
+import ThingsToDoList from "../components/ThingsToDoList";
+import CampgroundList from "../components/CampgroundList";
 // import SkillForm from '../components/SkillForm';
 
-import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
+import { QUERY_SINGLE_PROFILE, QUERY_ME } from "../utils/queries";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 
 const Profile = () => {
   const { profileId } = useParams();
@@ -41,43 +41,46 @@ const Profile = () => {
   }
   return (
     <div
-    style={{
-      backgroundImage: `url(/parks.jpg)`,
-      height: "80vh",
-      backgroundSize: "100% 100%",
-      backgroundRepeat: "no-repeat",
-    }}
-  >
-    <div>
-      <h2 className="card-header">
-        {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
-        skills...
-      </h2>
+      style={{
+        backgroundImage: `url(/parks.jpg)`,
+        height: "80vh",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div>
+        <h2 className="card-header">
+          {profileId ? `${profile.name}'s` : "Your"} friends have endorsed these
+          skills...
+        </h2>
 
-      {profile.parks?.length > 0 && (
-        <ParksList
-          parks={profile.parks}
-          isLoggedInUser={!profileId && true}
-        />
-      )}
-      {profile.thingsToDos?.length > 0 && (
-        <ThingsToDoList
-          thingsToDos={profile.thingsToDos}
-          isLoggedInUser={!profileId && true}
-        />
-      )}
-      {profile.campgrounds?.length > 0 && (
-        <CampgroundList
-          campgrounds={profile.campgrounds}
-          isLoggedInUser={!profileId && true}
-        />
-      )}
+        {profile.parks?.length > 0 && (
+          <ParksList
+            profileId={profile._id}
+            parks={profile.parks}
+            isLoggedInUser={!profileId && true}
+          />
+        )}
+        {profile.thingsToDos?.length > 0 && (
+          <ThingsToDoList
+            profileId={profile._id}
+            thingsToDos={profile.thingsToDos}
+            isLoggedInUser={!profileId && true}
+          />
+        )}
+        {profile.campgrounds?.length > 0 && (
+          <CampgroundList
+            profileId={profile._id}
+            campgrounds={profile.campgrounds}
+            isLoggedInUser={!profileId && true}
+          />
+        )}
 
-      {/* <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+        {/* <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <SkillForm profileId={profile._id} />
       </div> */}
+      </div>
     </div>
-  </div>
   );
 };
 export default Profile;
