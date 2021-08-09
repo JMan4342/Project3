@@ -1,11 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import tentImage from "./tent.jpg"
 
 export default function NavBar() {
   return (
 <nav class="navbar navbar-expand-sm navbar-light bg-light  ">
   <div class="container-fluid">
     <a class="navbar-brand" >Wander Beyond</a>
+    <img
+                src={tentImage}
+                alt="css shield"
+               
+              />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>

@@ -23,31 +23,6 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
-
-const { getParks, getAlerts, getActivities, getCampgrounds } = require("./utils/api");
-
-app.get("/parks", async function (req, res) {
-  res.json(await getParks(req.query));
-});
-
-app.get("/alerts", async function (req, res) {
-  console.log(req.query);
-  res.json(await getAlerts(req.query.q));
-});
-
-app.get("/thingstodo", async function (req, res) {
-  console.log(req.query);
-  res.json(await getActivities(req.query.q));
-});
-
-app.get("/campgrounds", async function (req, res) {
-  console.log(req.query);
-  res.json(await getCampgrounds(req.query.q));
-})
-
-
-// MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
