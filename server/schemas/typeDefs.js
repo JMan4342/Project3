@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Profile {
@@ -29,7 +29,7 @@ const typeDefs = gql`
 
     removeProfile: Profile
 
-    addPark(profileId: ID!, Park: String!): Profile
+    addPark(parkCode: String!): Profile
     removePark(Park: String!): Profile
 
     addThingsToDo(profileId: ID!, ThingsToDo: String!): Profile
@@ -37,7 +37,6 @@ const typeDefs = gql`
 
     addCampground(profileId: ID!, Campground: String!): Profile
     removeCampground(Campground: String!): Profile
-
   }
 `;
 
