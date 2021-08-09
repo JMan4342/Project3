@@ -42,7 +42,8 @@ const Profile = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(/parks.jpg)`,
+
+        backgroundImage: `url(/public/img/camping.jpg)`,
         height: "80vh",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
@@ -50,8 +51,7 @@ const Profile = () => {
     >
       <div>
         <h2 className="card-header">
-          {profileId ? `${profile.name}'s` : "Your"} friends have endorsed these
-          skills...
+          {profileId ? `${profile.name}'s` : "Your"} Heading to Basecamp...
         </h2>
 
         {profile.parks?.length > 0 && (

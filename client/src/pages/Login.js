@@ -43,7 +43,7 @@ const Login = (props) => {
   return (
     <div
       style={{
-        backgroundImage: `url(/nightSkyLg.jpg)`,
+        backgroundImage: `url(/img/nightSkyLg.jpg)`,
         height: "100vh",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
@@ -52,19 +52,19 @@ const Login = (props) => {
       <main className="row justify-center mb-4 ">
         <div className="col-6 mt-5 mb-5">
           <div className="card bg-success">
-            <h4 className="custom-blue text-center h3 mb-1 mt-2 fw-normal">
+            <h4 className="text-center h3 mb-1 mt-2 fw-normal">
               Login to Basecamp
             </h4>
             <div className="card-body">
               {data ? (
                 <p>
-                  Success! You may now{" "}
-                  <Link to="/dashboard">Head back to base camp</Link>
+                  Congratulations! You may now{" "}
+                  <Link to="/dashboard">head to Basecamp</Link>
                 </p>
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
-                    className="form-input custom-blue"
+                    className="form-input"
                     placeholder="Your email"
                     name="email"
                     type="email"
@@ -72,7 +72,7 @@ const Login = (props) => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input custom-blue"
+                    className="form-input"
                     placeholder="******"
                     name="password"
                     type="password"

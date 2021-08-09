@@ -21,7 +21,7 @@ export async function getActivityByCode(id) {
   const data = await fetch(`/thingstodo?id=${id}`);
   return data.json();
 }
-
+// +++++++OR NAMED AS getCamping
 export async function getCampgrounds(searchTerm) {
   const data = await fetch(`/campgrounds?q=${searchTerm}`);
   return data.json();
