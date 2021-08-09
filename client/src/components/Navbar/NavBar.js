@@ -1,5 +1,5 @@
 import React from "react";
-import tentImage from "./images/tent4.png"
+import tentImage from "./images/tent4.png";
 
 export default function NavBar() {
   return (
@@ -60,5 +60,20 @@ export default function NavBar() {
     //     </nav>
     //   </div>
     // </header>
+
   );
 }
+
+// <header>
+//   <div>
+//     <nav>
+//       Wander Beyond
+//       <NavLink to="/dashboard">BaseCamp |</NavLink>
+//       <NavLink to="/camping">Camping |</NavLink>
+//       <NavLink to="/hiking">Hiking |</NavLink>
+//       <NavLink to="/Parks">Parks |</NavLink>
+//       <NavLink to="/register">Register |</NavLink>
+//       <NavLink to="/home">Home</NavLink>
+//     </nav>
+//   </div>
+// </header>
