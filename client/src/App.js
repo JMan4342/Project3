@@ -15,10 +15,12 @@ const Login = lazy(() => import("./pages/Login"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Register = lazy(() => import("./pages/Register"));
 const Camping = lazy(() => import("./pages/Camping"));
+const CampingDetail = lazy(() => import("./pages/CampingDetails"));
 const Parks = lazy(() => import("./pages/Parks"));
 const ParkDetail = lazy(() => import("./pages/ParkDetail"));
 const Supplies = lazy(() => import("./pages/Supplies"));
 const Hiking = lazy(() => import("./pages/Hiking"));
+const ActivityDetail = lazy(() => import("./pages/ActivityDetail"));
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -63,19 +65,25 @@ export default class App extends Component {
                 <Route exact path="/camping">
                   <Camping />
                 </Route>
+                <Route exact path="/campgrounds/:id">
+                  <CampingDetail />
+                </Route>
                 <Route exact path="/parks">
                   <Parks />
                 </Route>
                 <Route exact path="/parks/:parkCode">
                   <ParkDetail />
                 </Route>
-                <Route exact path="/supplies">
+                {/* <Route exact path="/supplies">
                   <Supplies />
-                </Route>
+                </Route> */}
                 <Route exact path="/hiking">
                   <Hiking />
                 </Route>
-                <Route exact path="/Login">
+                <Route exact path="/thingstodo/:id">
+                  <ActivityDetail />
+                </Route>
+                <Route exact path="/login">
                   <Login />
                 </Route>
               </Switch>

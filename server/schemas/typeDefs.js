@@ -6,7 +6,9 @@ const typeDefs = gql`
     name: String
     email: String
     password: String
-    skills: [String]!
+    parks: [String]
+    thingsToDo: [String]
+    campgrounds: [String]
   }
 
   type Auth {
@@ -25,9 +27,17 @@ const typeDefs = gql`
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    addSkill(profileId: ID!, skill: String!): Profile
     removeProfile: Profile
-    removeSkill(skill: String!): Profile
+
+    addPark(profileId: ID!, Park: String!): Profile
+    removePark(Park: String!): Profile
+
+    addThingsToDo(profileId: ID!, ThingsToDo: String!): Profile
+    removeThingsToDo(ThingsToDo: String!): Profile
+
+    addCampground(profileId: ID!, Campground: String!): Profile
+    removeCampground(Campground: String!): Profile
+
   }
 `;
 

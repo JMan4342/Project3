@@ -21,6 +21,7 @@ export default function Camping() {
 
     try {
       const response = await getCamping(searchTerm);
+      const response = await getCampgrounds(searchTerm);
       setResults(response.data);
       if (!response) {
         throw new Error("something went wrong!");
@@ -40,28 +41,30 @@ export default function Camping() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <main>
-        National Park Camping:
-        <input
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
-        <button onClick={handleSubmit}>Search</button>
-        {console.log(results)}
-        {results.length
-          ? results.map((res) => {
-              return (
-                <div>
-                  <Link to={`/camping/${res.data}`}>
-                    {/* console.log(data) */}
-                    <h1>{res.name}</h1>
-                  </Link>
-                </div>
-              );
-            })
-          : "no results found"}
-      </main>
+      <div>
+        <div>
+          National Park Camping:
+          <input
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
+          <button onClick={handleSubmit}>Search</button>
+          {console.log(results)}
+          {results.length
+            ? results.map((res) => {
+                return (
+                  <div>
+                    <Link to={`/camping/${res.data}`}></Link>{" "}
+                    <Link to={`campgrounds/${res.id}`}>
+                      <h1>{res.name}</h1>
+                    </Link>
+                  </div>
+                );
+              })
+            : "no results found"}
+        </div>
+      </div>
     </div>
   );
 }

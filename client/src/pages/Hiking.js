@@ -49,7 +49,7 @@ export default function Activities() {
           ? results.map((res) => {
               return (
                 <div>
-                  <Link to={`/parks/${res.relatedParks.parkCode}`}>
+                  <Link to={`/thingstodo/${res.id}`}>
                     <h1>{res.title}</h1>
                   </Link>
                   <p>{res.relatedParks[0].fullName}</p>

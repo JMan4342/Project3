@@ -56,7 +56,7 @@ const Signup = () => {
           <div className="card-body">
               {data ? (
                 <p>
-                  Success! You may now head{" "}
+                  Success! {" "}
                   <Link to="/">Heading to BaseCamp.</Link>
                 </p>
               ) : (

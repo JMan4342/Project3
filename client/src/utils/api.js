@@ -17,7 +17,28 @@ export async function getActivities(searchTerm) {
   return data.json();
 }
 
-export async function getCamping(searchTerm) {
-  const data = await fetch(`/camping?q=${searchTerm}`);
+export async function getActivityByCode(id) {
+  const data = await fetch(`/thingstodo?id=${id}`);
   return data.json();
 }
+// +++++++OR NAMED AS getCamping
+export async function getCampgrounds(searchTerm) {
+  const data = await fetch(`/campgrounds?q=${searchTerm}`);
+  return data.json();
+}
+
+export async function getCampgroundsById(id) {
+  const data = await fetch(`/campgrounds?id=${id}`);
+  return data.json();
+}
+
+export const savePark = (parkData, token) => {
+  return fetch('/api/users', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(parkData),
+  });
+};
