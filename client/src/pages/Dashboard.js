@@ -42,6 +42,7 @@ const Profile = () => {
   return (
     <div
       style={{
+
         backgroundImage: `url(/public/img/camping.jpg)`,
         height: "80vh",
         backgroundSize: "100% 100%",
@@ -55,18 +56,21 @@ const Profile = () => {
 
         {profile.parks?.length > 0 && (
           <ParksList
+            profileId={profile._id}
             parks={profile.parks}
             isLoggedInUser={!profileId && true}
           />
         )}
         {profile.thingsToDos?.length > 0 && (
           <ThingsToDoList
+            profileId={profile._id}
             thingsToDos={profile.thingsToDos}
             isLoggedInUser={!profileId && true}
           />
         )}
         {profile.campgrounds?.length > 0 && (
           <CampgroundList
+            profileId={profile._id}
             campgrounds={profile.campgrounds}
             isLoggedInUser={!profileId && true}
           />
