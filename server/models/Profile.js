@@ -19,7 +19,19 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  skills: [
+  parks: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
+  thingsToDo: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
+  campgrounds: [
     {
       type: String,
       trim: true,
