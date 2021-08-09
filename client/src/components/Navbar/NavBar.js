@@ -1,5 +1,5 @@
 import React from "react";
-import tentImage from "./tent.jpg"
+import tentImage from "./images/tent4.png"
 
 export default function NavBar() {
   return (
@@ -30,11 +30,13 @@ export default function NavBar() {
         <li className="nav-item">
           <a className="nav-link" href="/camping">Camping</a>
         </li>
+
         <li className="nav-item">
           <a className="nav-link" href="/login">Login|</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/register">|Register </a>
+
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/dashboard">Basecamp</a>

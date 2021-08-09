@@ -52,7 +52,7 @@ const Login = (props) => {
       <main className="row justify-center mb-4 ">
         <div className="col-6 mt-5 mb-5">
           <div className="card bg-success">
-            <h4 className="text-center h3 mb-1 mt-2 fw-normal">
+            <h4 className="font4 text-center h3 mb-1 mt-2 fw-normal">
               Login to Basecamp
             </h4>
             <div className="card-body">
@@ -64,7 +64,7 @@ const Login = (props) => {
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
-                    className="form-input"
+                    className="font4 form-input"
                     placeholder="Your email"
                     name="email"
                     type="email"
@@ -72,7 +72,7 @@ const Login = (props) => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="font4 form-input"
                     placeholder="******"
                     name="password"
                     type="password"
@@ -80,7 +80,7 @@ const Login = (props) => {
                     onChange={handleChange}
                   />
                   <button
-                    className="btn btn-block btn-dark"
+                    className="font4 btn btn-block btn-dark"
                     style={{ cursor: "pointer" }}
                     type="submit"
                   >
