@@ -64,7 +64,7 @@ const Signup = () => {
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
-                    className="form-input"
+                    className="form-input custom-blue"
                     placeholder="Your username"
                     name="name"
                     type="text"
@@ -72,7 +72,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="form-input custom-blue"
                     placeholder="Your email"
                     name="email"
                     type="email"
@@ -80,7 +80,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="form-input custom-blue"
                     placeholder="******"
                     name="password"
                     type="password"
