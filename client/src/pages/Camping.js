@@ -20,6 +20,7 @@ export default function Camping() {
     }
 
     try {
+      // const response = await getCamping(searchTerm);
       const response = await getCampgrounds(searchTerm);
       setResults(response.data);
       if (!response) {
