@@ -12,12 +12,32 @@ export const ADD_PROFILE = gql`
   }
 `;
 
-export const ADD_SKILL = gql`
-  mutation addSkill($profileId: ID!, $skill: String!) {
-    addSkill(profileId: $profileId, skill: $skill) {
+export const ADD_PARK = gql`
+  mutation addPark($profileId: ID!, $park: String!) {
+    addPark(profileId: $profileId, park: $park) {
       _id
       name
-      skills
+      parks
+    }
+  }
+`;
+
+export const ADD_THINGSTODO = gql`
+  mutation addThingsToDo($profileId: ID!, $thingsToDo: String!) {
+    addThingsToDo(profileId: $profileId, thingsToDo: $thingsToDo) {
+      _id
+      name
+      thingsToDos
+    }
+  }
+`;
+
+export const ADD_CAMPGROUND = gql`
+  mutation addCampground($profileId: ID!, $campground: String!) {
+    addCampground(profileId: $profileId, campground: $campground) {
+      _id
+      name
+      campgrounds
     }
   }
 `;
@@ -34,12 +54,32 @@ export const LOGIN_USER = gql`
   }
 `;
 
-export const REMOVE_SKILL = gql`
-  mutation removeSkill($skill: String!) {
-    removeSkill(skill: $skill) {
+export const REMOVE_PARK = gql`
+  mutation removePark($park: String!) {
+    removePark(park: $park) {
       _id
       name
-      skills
+      parks
+    }
+  }
+`;
+
+export const REMOVE_THINGSTODO = gql`
+  mutation removeThingsToDo($park: String!) {
+    removeThingsToDo(thingsToDo: $thingsToDo) {
+      _id
+      name
+      thingsToDos
+    }
+  }
+`;
+
+export const REMOVE_CAMPGROUND = gql`
+  mutation removeCampground($campground: String!) {
+    removeCampground(campground: $campground) {
+      _id
+      name
+      campgrounds
     }
   }
 `;
