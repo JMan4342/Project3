@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/Navbar/NavBar";
 
-const Home = lazy(() => import("./pages/Home"));
+const Login = lazy(() => import("./pages/Login"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Register = lazy(() => import("./pages/Register"));
 const Camping = lazy(() => import("./pages/Camping"));
@@ -52,7 +52,7 @@ export default class App extends Component {
             {/* <div style={{ padding: "4% 6%" }}> */}
               <Switch>
                 <Route exact path="/">
-                  <Home />
+                  <Login />
                 </Route>
                 <Route exact path="/dashboard">
                   <Dashboard />
@@ -75,8 +75,8 @@ export default class App extends Component {
                 <Route exact path="/hiking">
                   <Hiking />
                 </Route>
-                <Route exact path="/home">
-                  <Home />
+                <Route exact path="/Login">
+                  <Login />
                 </Route>
               </Switch>
             {/* </div> */}

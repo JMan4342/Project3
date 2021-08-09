@@ -18,12 +18,24 @@ export default function ParkDetail(props) {
   }
 
   return (
+    
     <>
+ 
       <h1>{park.fullName}</h1>
       <p>{park.description}</p>
-    
       <img src={ park.images ? park.images[0].url : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png"} alt={park.images ? park.images[0].altText : "no image"} />
+
 
     </>
   );
 }
+
+   {/* THIS IMAGE CONFLICTS WITH THEE API IMG */}
+{/* <div
+      style={{
+        backgroundImage: `url(/img/hiking.jpg)`,
+        height: "80vh",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    > */}

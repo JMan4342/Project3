@@ -16,3 +16,8 @@ export async function getActivities(searchTerm) {
   const data = await fetch(`/thingstodo?q=${searchTerm}`);
   return data.json();
 }
+
+export async function getCamping(searchTerm) {
+  const data = await fetch(`/camping?q=${searchTerm}`);
+  return data.json();
+}

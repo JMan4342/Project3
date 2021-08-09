@@ -11,12 +11,11 @@ export default function NavBar() {
     </button>
     <div class="collapse navbar-collapse ml-auto" id="navbarNav">
       <ul class="navbar-nav ">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/dashboard">Basecamp</a>
-        </li>
+
+        {/* <li class="nav-item">
+        This was a DOUBLE ROUTE for HOME 
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li> */}
         <li class="nav-item">
           <a class="nav-link" href="/camping">Camping</a>
         </li>
@@ -27,10 +26,13 @@ export default function NavBar() {
           <a class="nav-link" href="/parks">Parks</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/register">Register</a>
+          <a class="nav-link" href="/login">Login|</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home">Home</a>
+          <a class="nav-link" href="/register">|Register </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Basecamp</a>
         </li>
       
       </ul>

@@ -25,7 +25,7 @@ app.use(express.json());
 
 // MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 
-const { getParks, getAlerts, getActivities } = require("./utils/api");
+const { getParks, getAlerts, getActivities, getCamping } = require("./utils/api");
 
 app.get("/parks", async function (req, res) {
   res.json(await getParks(req.query));

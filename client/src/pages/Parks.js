@@ -30,9 +30,10 @@ export default function Parks() {
 
   return (
     <div style={{
-      backgroundImage: `url(/img/parks.jpg)`, height:"80vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
+      backgroundImage: `url(/img/parks1-sm.jpg)`, height:"80vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
     }}>
     <main>
+
       Key word:
       <input
         onChange={(event) => {

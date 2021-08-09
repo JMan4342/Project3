@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { getParks } from "../utils/api";
-import { getAlerts } from "../utils/api";
+import { getCamping } from "../utils/api";
+//  import { getAlerts } from "../utils/api";
+// =============================================
+// ==DEVELOPING  CAMPING ROUTE === BROKEN==
+// ============================================
 
-export default function Parks() {
+export default function Camping() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [results, setResults] = useState([]);
@@ -17,7 +20,7 @@ export default function Parks() {
     }
 
     try {
-      const response = await getParks(searchTerm);
+      const response = await getCamping(searchTerm);
       setResults(response.data);
       if (!response) {
         throw new Error("something went wrong!");
@@ -29,30 +32,36 @@ export default function Parks() {
   };
 
   return (
-    <div style={{
-      backgroundImage: `url(/camping.jpg)`, height:"80vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
-    }}>
-    <main>
-      Key word:
-      <input
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <button onClick={handleSubmit}>Search</button>
-      {console.log(results)}
-      {results.length
-        ? results.map((res) => {
-            return (
-              <div>
-                <Link to={`/parks/${res.parkCode}`}>
-                  <h1>{res.name}</h1>
-                </Link>
-              </div>
-            );
-          })
-        : "no results found"}
-    </main>
+    <div
+      style={{
+        backgroundImage: `url(/img/camping3-sm.jpg)`,
+        height: "80vh",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <main>
+        National Park Camping:
+        <input
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }}
+        />
+        <button onClick={handleSubmit}>Search</button>
+        {console.log(results)}
+        {results.length
+          ? results.map((res) => {
+              return (
+                <div>
+                  <Link to={`/camping/${res.data}`}>
+                    {/* console.log(data) */}
+                    <h1>{res.name}</h1>
+                  </Link>
+                </div>
+              );
+            })
+          : "no results found"}
+      </main>
     </div>
   );
 }
