@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_PARK } from "../utils/mutations";
 import { Link } from "react-router-dom";
-import { getParks, savePark } from "../utils/api";
+import { getParks } from "../utils/api";
 import { getAlerts } from "../utils/api";
 // import { saveParkCodes, getSavedParkCodes } from "../utils/localStorage";
-import Auth from '../utils/auth'
+import Auth from "../utils/auth";
 
 export default function Parks() {
   const [searchTerm, setSearchTerm] = useState("");
-
   const [results, setResults] = useState([]);
-  // const [savedParkCodes, setSavedParkCodes] = useState(getSavedParkCodes());
-
-  // useEffect(() => {
-  //   return () => saveParkCodes(savedParkCodes);
-  // });
+  const [addPark, { data }] = useMutation(ADD_PARK);
 
   const handleSubmit = async (event) => {
-    //  console.log(searchTerm)
     event.preventDefault();
 
     if (!searchTerm) {
@@ -36,17 +32,15 @@ export default function Parks() {
   };
 
   const handleSavePark = async (parkCode) => {
-    const parkToSave = results.find((park) => park.parkCode === parkCode);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
       return false;
     }
+    addPark({ variables: { parkCode } });
     try {
-      const response = await savePark(parkToSave, token);
-
-      if(!response.ok) {
-        throw new Error('something went wrong?');
+      {
+        throw new Error("something went wrong?");
       }
 
       // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
@@ -56,32 +50,40 @@ export default function Parks() {
   };
 
   return (
-    <div style={{
-      backgroundImage: `url(/img/parks1-sm.jpg)`, height:"80vh", backgroundSize: "100% 100%", backgroundRepeat:"no-repeat"
-    }}>
-    <main>
-
-      Key word:
-      <input
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <button onClick={handleSubmit}>Search</button>
-      {console.log(results)}
-      {results.length
-        ? results.map((res) => {
-            return (
-              <div key={res.parkCode}>
-                <Link to={`/parks/${res.parkCode}`}>
-                  <h1>{res.name}</h1>
-                </Link>
-                <button onClick={handleSavePark}>Save</button>
-              </div>
-            );
-          })
-        : "no results found"}
-    </main>
+    <div
+      style={{
+        backgroundImage: `url(/img/parks1-sm.jpg)`,
+        height: "80vh",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <main>
+        <div className="searchBar">
+          <p className="search">Keyword:</p>
+          <input
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
+          <button onClick={handleSubmit}>Search</button>
+          {console.log(results)}
+        </div>
+        <div className="parks">
+          {results.length
+            ? results.map((res) => {
+                return (
+                  <div key={res.parkCode}>
+                    <Link to={`/parks/${res.parkCode}`}>
+                      <h1>{res.name}</h1>
+                    </Link>
+                    <button onClick={handleSavePark}>Save</button>
+                  </div>
+                );
+              })
+            : "no results found"}
+        </div>
+      </main>
     </div>
   );
 }

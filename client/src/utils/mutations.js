@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const ADD_PROFILE = gql`
   mutation addProfile($name: String!, $email: String!, $password: String!) {
@@ -13,30 +13,27 @@ export const ADD_PROFILE = gql`
 `;
 
 export const ADD_PARK = gql`
-  mutation addPark($profileId: ID!, $park: String!) {
-    addPark(profileId: $profileId, park: $park) {
+  mutation addPark($parkCode: String!) {
+    addPark(parkCode: $parkCode) {
       _id
-      name
       parks
     }
   }
 `;
 
 export const ADD_THINGSTODO = gql`
-  mutation addThingsToDo($profileId: ID!, $thingsToDo: String!) {
-    addThingsToDo(profileId: $profileId, thingsToDo: $thingsToDo) {
+  mutation addThingsToDo($id: String!) {
+    addThingsToDo(id: $id) {
       _id
-      name
       thingsToDos
     }
   }
 `;
 
 export const ADD_CAMPGROUND = gql`
-  mutation addCampground($profileId: ID!, $campground: String!) {
-    addCampground(profileId: $profileId, campground: $campground) {
+  mutation addCampground($id: String!) {
+    addCampground(id: $id) {
       _id
-      name
       campgrounds
     }
   }

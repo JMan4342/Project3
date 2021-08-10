@@ -5,7 +5,7 @@ const {
   savePark,
   deletePark,
   saveThingsToDo,
-  deleteActivity,
+  // deleteActivity,
   saveCampground,
   deleteCampground,
   login,
@@ -25,10 +25,8 @@ router.route('/login').post(login);
 
 router.route('/me').get(authMiddleware, getSingleUser);
 
-router.
-
 router.route('/parks/:parkCode').delete(authMiddleware, deletePark);
-router.route('/activities/:id').delete(authMiddleware, deleteActivity);
+// router.route('/activities/:id').delete(authMiddleware, deleteActivity);
 router.route('/thingsToDo/:id').delete(authMiddleware, deleteThingsToDo);
 router.route('/campgrounds/:id').delete(authMiddleware, deleteCampground);
 

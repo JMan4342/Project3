@@ -11,14 +11,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/Navbar/NavBar";
 
+
 const Login = lazy(() => import("./pages/Login"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Register = lazy(() => import("./pages/Register"));
-const Camping = lazy(() => import("./pages/Camping"));
-const CampingDetail = lazy(() => import("./pages/CampingDetails"));
+const Campgrounds = lazy(() => import("./pages/Camping"));
+const CampgroundDetail = lazy(() => import("./pages/CampingDetails"));
 const Parks = lazy(() => import("./pages/Parks"));
 const ParkDetail = lazy(() => import("./pages/ParkDetail"));
-const Supplies = lazy(() => import("./pages/Supplies"));
+// const Supplies = lazy(() => import("./pages/Supplies"));
 const Hiking = lazy(() => import("./pages/Hiking"));
 const ActivityDetail = lazy(() => import("./pages/ActivityDetail"));
 
@@ -43,7 +44,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+
+    
 export default class App extends Component {
+
   obj = { name: "bottom" };
   render() {
     return (
@@ -62,11 +67,11 @@ export default class App extends Component {
                 <Route exact path="/register">
                   <Register />
                 </Route>
-                <Route exact path="/camping">
-                  <Camping />
+                <Route exact path="/campground">
+                  <Campgrounds />
                 </Route>
                 <Route exact path="/campgrounds/:id">
-                  <CampingDetail />
+                  <CampgroundDetail />
                 </Route>
                 <Route exact path="/parks">
                   <Parks />
@@ -84,7 +89,7 @@ export default class App extends Component {
                   <ActivityDetail />
                 </Route>
                 <Route exact path="/login">
-                  <Login />
+                  <Login  />
                 </Route>
               </Switch>
             {/* </div> */}

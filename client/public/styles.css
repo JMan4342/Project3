@@ -36,7 +36,9 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-light {
 /* affects the spacing of the nav bar items from each other*/
 .nav-link {
     margin-right: 5px;
-  
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+    color: #caecba;
 }
 /* Affects the color of the nav bar items*/
 .navbar-light .navbar-nav .nav-link {
@@ -53,7 +55,8 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-light {
 }
 
 /* This gradient affects the wander beyond text on navbar*/
-a:not([href]):not([tabindex]) {
+
+.navbar-brand {
     font-family: 'Permanent Marker', cursive;
     font-size: 50px;
     background: url("./img/tree13.jpg");
@@ -102,4 +105,37 @@ img {
     max-width: 100%;
     height: 40px;
     border-radius: 20px;
+  }
+.parkImg {
+    width: 100%;
+    height: 100%;
+}
+
+.parkFormat{
+    display: block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      width: 80%;
+      height: 700px;
+
+      margin-left: 10%;
+}
+  .parks{
+      display: block;
+      margin-top: 20px;
+      padding-top: 7px;
+      width: 80%;
+      height: 700px;
+      overflow-y: scroll;
+      background-color: rgba(255,255,255,0.5);
+      margin-left: 10%;
+  }
+  .searchBar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .search{
+      font-weight: bold;
+      margin-top: 12px;
   }

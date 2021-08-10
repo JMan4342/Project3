@@ -51,7 +51,7 @@ const Profile = () => {
     >
       <div>
         <h2 className="card-header">
-          {profileId ? `${profile.name}'s` : "Your"} Heading to Basecamp...
+          {profileId ? `${profile.name}'s` : "You Are"} Heading to Basecamp...
         </h2>
 
         {profile.parks?.length > 0 && (

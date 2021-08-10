@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getCampgrounds } from "../utils/api";
+
 //  import { getAlerts } from "../utils/api";
 // =============================================
 // ==DEVELOPING  CAMPING ROUTE === BROKEN==
 // ============================================
 
-export default function Camping() {
+export default function Campgrounds() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [results, setResults] = useState([]);
@@ -41,9 +42,9 @@ export default function Camping() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div>
-        <div>
-          National Park Camping:
+      <main>
+        <div className="searchBar">
+          <p className="search">Keyword:</p>
           <input
             onChange={(event) => {
               setSearchTerm(event.target.value);
@@ -51,6 +52,8 @@ export default function Camping() {
           />
           <button onClick={handleSubmit}>Search</button>
           {console.log(results)}
+        </div>
+        <div className="parks">
           {results.length
             ? results.map((res) => {
                 return (
@@ -64,7 +67,7 @@ export default function Camping() {
               })
             : "no results found"}
         </div>
-      </div>
+      </main>
     </div>
   );
 }
