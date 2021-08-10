@@ -26,3 +26,14 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+
+
+export const QUERY_PARKS = gql`
+query findParks($park:String){
+  findParks(park:$park){
+    fullName
+    description
+  }
+} 
+`;

@@ -1,3 +1,5 @@
 const Profile = require('./Profile');
+const Park = require('./Park');
 
-module.exports = { Profile };
+
+module.exports = { Profile, Park };
