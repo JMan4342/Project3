@@ -11,6 +11,8 @@
 
 * [Wireframe](#wireframe)
 
+* [Testing](#testing)
+
 * [Technology](#technology)
 
 * [TaskBreakdown](#taskbreakdown)
@@ -60,14 +62,23 @@ See the deployed version here! [Deployed link](####)
 
 ---
 
+## **Testing**
+
+Below are screenshots showing the application.
+
+![Login page](./client/public/img/README_img/login.jpeg)
+![Registration page](./client/public/img/README_img/registration.jpeg)
+![Search page](./client/public/img/README_img/search_page.jpeg)
+![Details page](./client/public/img/README_img/detail_page.jpeg)
+
+---
+
 ## **Technology**
 
 - React for frontend
 - Javascript
 - JWT for authentication
-- Material UI for styling
-- MongoDB
-- Mongoose ODM
+- Bootstrap and CSS for styling
 - GraphQL
 - Express.js 
 - Node.js
@@ -98,6 +109,4 @@ or Miguellozano@gmail.com
 * Joseph Manning
 
 * Miguel Lozano
-
-* Chris Hart
 
