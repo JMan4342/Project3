@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getCampgrounds } from "../utils/api";
+
 //  import { getAlerts } from "../utils/api";
 // =============================================
 // ==DEVELOPING  CAMPING ROUTE === BROKEN==
@@ -42,7 +43,7 @@ export default function Campgrounds() {
       }}
     >
       <main>
-      <div className="searchBar">
+        <div className="searchBar">
           <p className="search">Keyword:</p>
           <input
             onChange={(event) => {
@@ -51,8 +52,8 @@ export default function Campgrounds() {
           />
           <button onClick={handleSubmit}>Search</button>
           {console.log(results)}
-          </div>
-          <div className="parks">
+        </div>
+        <div className="parks">
           {results.length
             ? results.map((res) => {
                 return (
@@ -65,9 +66,8 @@ export default function Campgrounds() {
                 );
               })
             : "no results found"}
-            </div>
-        </main>
-      </div>
-   
+        </div>
+      </main>
+    </div>
   );
 }

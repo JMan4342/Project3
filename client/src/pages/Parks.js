@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_PARK } from "../utils/mutations";
 import { Link } from "react-router-dom";
-
 import { getParks } from "../utils/api";
-
+import { getAlerts } from "../utils/api";
+// import { saveParkCodes, getSavedParkCodes } from "../utils/localStorage";
 import Auth from "../utils/auth";
 
 export default function Parks() {
@@ -39,6 +39,11 @@ export default function Parks() {
     }
     addPark({ variables: { parkCode } });
     try {
+      {
+        throw new Error("something went wrong?");
+      }
+
+      // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
     } catch (err) {
       console.error(err);
     }
@@ -54,7 +59,6 @@ export default function Parks() {
       }}
     >
       <main>
-
         <div className="searchBar">
           <p className="search">Keyword:</p>
           <input
@@ -79,7 +83,6 @@ export default function Parks() {
               })
             : "no results found"}
         </div>
-
       </main>
     </div>
   );
