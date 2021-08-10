@@ -1,3 +1,4 @@
+import  Container  from "react-bootstrap/Container";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getThingsToDo } from "../utils/api";
@@ -37,14 +38,18 @@ export default function Activities() {
       }}
     >
       <main>
-        Key word:
+      <div className="searchBar">
+          <p className="search">Keyword:</p>
         <input
           onChange={(event) => {
             setSearchTerm(event.target.value);
           }}
         />
+        
         <button onClick={handleSubmit}>Search</button>
         {console.log(results)}
+        </div>
+        <div className="parks">
         {results.length
           ? results.map((res) => {
               return (
@@ -57,6 +62,7 @@ export default function Activities() {
               );
             })
           : "no results found"}
+          </div>
       </main>
     </div>
   );
