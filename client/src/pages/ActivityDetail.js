@@ -8,7 +8,7 @@ export default function ThingsToDoDetail(props) {
   console.log(params)
   useEffect(() => {
     getThingsToDoByCode(params.id).then(({ data }) => setThingsToDo(data[0]));
-  });
+  }, []);
 
   if (!thingsToDo) {
     return <h1>Loading Your Activity Data....</h1>;

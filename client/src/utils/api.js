@@ -18,7 +18,7 @@ export async function getThingsToDo(searchTerm) {
 }
 
 export async function getThingsToDoByCode(id) {
-  const data = await fetch(`/thingstodo?id=${id}`);
+  const data = await fetch(`/thingstodo?q=${id}`);
   return data.json();
 }
 
@@ -28,6 +28,6 @@ export async function getCampgrounds(searchTerm) {
 }
 
 export async function getCampgroundsById(id) {
-  const data = await fetch(`/campgrounds?id=${id}`);
+  const data = await fetch(`/campgrounds?q=${id}`);
   return data.json();
 }

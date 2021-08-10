@@ -1,5 +1,6 @@
 
 # **Wander Beyond**
+---
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -21,28 +22,23 @@
 
 ## **Project Description**
 
-To build a website that allows the user to plan a camping trip to a national park.
+To build a website that allows the user to plan a trip to a national park.
 
 ---
 
 ## **User Story**
 
 - As the planner for a camping trip, I want to have access to an application that will help me plan a trip to a national park.
-- WHEN I review the application's home page, THEN I am presented with a search option where I can search for a national park by name or location, an option to login to a personal account or create an account, and a navigation bar with options to view camping, hiking, biking, supplies.
-- WHEN I click on the login page, THEN I will be routed to a login page where I can login using a unique username and password.
-- WHEN I click on the login page and I do not have an account, THEN I can select an option to create an account.
-- WHEN I select a national park from a returned search, THEN I am presented with that park's detailed page.
-- WHEN I am presented with a national park's detailed page, THEN I am presented with the park's contact information that include the park's name, address, and phone number.
-- WHEN I am presented with a national park's detailed page, THEN I am presented with any alerts that may be active at that time.
-- WHEN I am presented with a national park's detailed page, THEN I am presented with available camping options.
-- WHEN I am presented with a national park's detailed page, THEN I am presented with the amenities that are offered at the park.
-- WHEN I am presented with a national park's detailed page, THEN I am presented with activities that are available at the park.
-- WHEN I am logged into my account, THEN see a link to go to personal dashboard.
-- WHEN I am logged into my account, THEN I am able to save a national park to my account for future access.
-- WHEN I am logged into my account and click on saved park, THEN I am taken to that park's detail page.
-- WHEN I am logged into my account, THEN have the option to delete any saved parks.
-
----
+- WHEN I open the app, THEN I am presented with the option to login to my account.
+- WHEN I do not have an account to immediatelly log into, THEN I can select a link to register for a new account. 
+- WHEN I successfully log into my personal account, THEN I am taken to my personal dashboard, also named Basecamp, where I will view any saved national parks, activites, and campgrounds that I saved from my search queries.
+- WHEN I select the "Parks", "Activities", or "Camping" links in the navigation bar, THEN I am presented with a search form where I can search for a national park, activities offered at national parks, and campgrounds on their respective pages based on keywords.
+- WHEN I am presented with the search results, THEN when I select a national park, activity, or campground that is generated from the search results I am directed to a detail page about the selected.
+- WHEN I am presented with the detailed page, THEN I am able to view the name, description, and photo of the selected option.
+- WHEN I am presented with the search results, THEN I am able to save the item to my Basecamp.
+- WHEN I am visit my Basecamp, THEN I am able to view my saved search results.
+- WHEN I click on a saved result, THEN I am taken to the item's detailed page.
+- WHEN I click on the delete option for an option in my Basecamp, THEN the item is removed from my saved results.
 
 
 

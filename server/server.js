@@ -42,7 +42,7 @@ app.get("/thingstodo", async function (req, res) {
 });
 
 app.get("/campgrounds", async function (req, res) {
-  console.log(req.query);
+  console.log("req", req.query);
   res.json(await getCampgrounds(req.query.q));
 });
 
