@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_PARK } from "../utils/mutations";
 import { Link } from "react-router-dom";
+
 import { getParks } from "../utils/api";
+
 import Auth from "../utils/auth";
 
 export default function Parks() {
@@ -37,6 +39,15 @@ export default function Parks() {
     }
     addPark({ variables: { parkCode } });
     try {
+
+      const response = await savePark(parkToSave, token);
+
+      if (!response.ok) {
+        throw new Error("something went wrong?");
+      }
+
+      // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
+
     } catch (err) {
       console.error(err);
     }
@@ -52,30 +63,32 @@ export default function Parks() {
       }}
     >
       <main>
-        Key word:
-        <input
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
-        <button onClick={handleSubmit}>Search</button>
-        {results.length
-          ? results.map((res) => {
-              return (
-                <div key={res.parkCode}>
-                  <Link to={`/parks/${res.parkCode}`}>
-                    <h1>{res.name}</h1>
-                  </Link>
-                  {/* Need to add logic so that you can't see the save button if the park has already been saved */}
-                  {Auth.loggedIn() && (
-                    <button onClick={() => handleSavePark(res.parkCode)}>
-                      Save
-                    </button>
-                  )}
-                </div>
-              );
-            })
-          : "no results found"}
+
+        <div className="searchBar">
+          <p className="search">Keyword:</p>
+          <input
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
+          <button onClick={handleSubmit}>Search</button>
+          {console.log(results)}
+        </div>
+        <div className="parks">
+          {results.length
+            ? results.map((res) => {
+                return (
+                  <div key={res.parkCode}>
+                    <Link to={`/parks/${res.parkCode}`}>
+                      <h1>{res.name}</h1>
+                    </Link>
+                    <button onClick={handleSavePark}>Save</button>
+                  </div>
+                );
+              })
+            : "no results found"}
+        </div>
+
       </main>
     </div>
   );

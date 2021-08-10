@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/Navbar/NavBar";
 
+
 const Login = lazy(() => import("./pages/Login"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Register = lazy(() => import("./pages/Register"));
@@ -43,7 +44,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+
+    
 export default class App extends Component {
+
   obj = { name: "bottom" };
   render() {
     return (
@@ -84,7 +89,7 @@ export default class App extends Component {
                   <ActivityDetail />
                 </Route>
                 <Route exact path="/login">
-                  <Login />
+                  <Login  />
                 </Route>
               </Switch>
             {/* </div> */}
