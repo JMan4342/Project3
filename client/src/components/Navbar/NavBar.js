@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import tentImage from "./images/tent4.png"
 import Auth from '../../utils/auth';
 
+
 export default function NavBar() {
 
  
@@ -11,7 +12,9 @@ export default function NavBar() {
 <nav className="navbar navbar-expand-sm navbar-light bg-light  ">
   <div className="container-fluid">
     <a className="navbar-brand" >Wander Beyond</a>
+
     <img className="tentImage"
+
                 src={tentImage}
                 alt="css shield"
                
@@ -37,11 +40,13 @@ export default function NavBar() {
         </li>
         
         <li className="nav-item">
+
           {Auth.loggedIn()  ?(<a className="nav-link" onClick={Auth.logout}>Logout</a>) : (<a className="nav-link" href="/login">Login</a>)}
         </li>
         <li className="nav-item">
           {/* <a className="nav-link" href="/register">Register </a> */}
           {Auth.loggedIn()  ?(<></>) : (<a className="nav-link" href="/register">Register</a>)}
+
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/dashboard">Basecamp</a>
@@ -67,20 +72,5 @@ export default function NavBar() {
     //     </nav>
     //   </div>
     // </header>
-
   );
 }
-
-// <header>
-//   <div>
-//     <nav>
-//       Wander Beyond
-//       <NavLink to="/dashboard">BaseCamp |</NavLink>
-//       <NavLink to="/camping">Camping |</NavLink>
-//       <NavLink to="/hiking">Hiking |</NavLink>
-//       <NavLink to="/Parks">Parks |</NavLink>
-//       <NavLink to="/register">Register |</NavLink>
-//       <NavLink to="/home">Home</NavLink>
-//     </nav>
-//   </div>
-// </header>

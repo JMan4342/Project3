@@ -100,7 +100,7 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-light {
     -webkit-text-fill-color: transparent;
 }
 
-.tentImage {
+img {
     display: block;
     max-width: 100%;
     height: 40px;

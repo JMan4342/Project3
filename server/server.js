@@ -25,12 +25,7 @@ app.use(express.json());
 
 // MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 
-const {
-  getParks,
-  getAlerts,
-  getThingsToDo,
-  getCampgrounds,
-} = require("./utils/api");
+const { getParks, getAlerts, getThingsToDo, getCampgrounds } = require("./utils/api");
 
 app.get("/parks", async function (req, res) {
   res.json(await getParks(req.query));
@@ -50,6 +45,7 @@ app.get("/camping", async function (req, res) {
   console.log(req.query);
   res.json(await getCampgrounds(req.query.q));
 });
+
 
 // MOVE EVERYTHING BETWEEN THESE TWO COMMENTS
 

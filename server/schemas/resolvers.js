@@ -63,13 +63,13 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    addThingsToDo: async (parent, { profileId, thingsToDo }, context) => {
+    addThingsToDo: async (parent, { id }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         return Profile.findOneAndUpdate(
-          { _id: profileId },
+          { _id: context.user._id },
           {
-            $addToSet: { thingsToDos: thingsToDo },
+            $addToSet: { thingsToDo: id },
           },
           {
             new: true,
