@@ -39,6 +39,10 @@ export default function Parks() {
     }
     addPark({ variables: { parkCode } });
     try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
       const response = await savePark(parkToSave, token);
 
       if (!response.ok) {
@@ -46,6 +50,10 @@ export default function Parks() {
       }
 
       // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
     } catch (err) {
       console.error(err);
     }
@@ -61,6 +69,10 @@ export default function Parks() {
       }}
     >
       <main>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
         <div className="searchBar">
           <p className="search">Keyword:</p>
           <input
@@ -85,6 +97,10 @@ export default function Parks() {
               })
             : "no results found"}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
       </main>
     </div>
   );
