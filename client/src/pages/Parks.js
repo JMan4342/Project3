@@ -39,14 +39,11 @@ export default function Parks() {
     }
     addPark({ variables: { parkCode } });
     try {
-
-     
- {
+      {
         throw new Error("something went wrong?");
       }
 
       // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
-
     } catch (err) {
       console.error(err);
     }
@@ -62,7 +59,6 @@ export default function Parks() {
       }}
     >
       <main>
-
         <div className="searchBar">
           <p className="search">Keyword:</p>
           <input
@@ -87,7 +83,6 @@ export default function Parks() {
               })
             : "no results found"}
         </div>
-
       </main>
     </div>
   );
