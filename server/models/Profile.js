@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const { asyncMap } = require('@apollo/client/utilities');
 
 const profileSchema = new Schema({
   name: {
@@ -38,6 +39,15 @@ const profileSchema = new Schema({
     },
   ],
 });
+
+
+var display= async()=>{
+  console.log("test")
+}
+
+
+// display()
+
 
 // set up pre-save middleware to create password
 profileSchema.pre('save', async function (next) {
