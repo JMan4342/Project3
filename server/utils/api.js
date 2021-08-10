@@ -1,5 +1,5 @@
 const axios = require("axios");
-require("dotenv").config();
+require("dotenv").config()
 
 const { NPS_API_KEY } = process.env;
 
@@ -24,14 +24,7 @@ async function getThingsToDo(query) {
     `https://developer.nps.gov/api/v1/thingstodo?q=${params}&limit=50&start=0&sort=&api_key=${NPS_API_KEY}`
   );
   return data;
-}
-// async function getCamping(query) {
-//   const params = new URLSearchParams(query).toString();
-//   const { data } = await axios.get(
-//     `https://developer.nps.gov/api/v1/camping?q=${params}&limit=50&start=0&sort=&api_key=${NPS_API_KEY}`
-//   );
-//   return data;
-// }
+  }
 
 async function getCampgrounds(query) {
   const params = new URLSearchParams(query).toString();

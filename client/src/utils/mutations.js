@@ -22,20 +22,18 @@ export const ADD_PARK = gql`
 `;
 
 export const ADD_THINGSTODO = gql`
-  mutation addThingsToDo($profileId: ID!, $thingsToDo: String!) {
-    addThingsToDo(profileId: $profileId, thingsToDo: $thingsToDo) {
+  mutation addThingsToDo($id: String!) {
+    addThingsToDo(id: $id) {
       _id
-      name
       thingsToDos
     }
   }
 `;
 
 export const ADD_CAMPGROUND = gql`
-  mutation addCampground($profileId: ID!, $campground: String!) {
-    addCampground(profileId: $profileId, campground: $campground) {
+  mutation addCampground($id: String!) {
+    addCampground(id: $id) {
       _id
-      name
       campgrounds
     }
   }
