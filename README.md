@@ -66,7 +66,10 @@ See the deployed version here! [Deployed link](####)
 
 Below are screenshots showing the application.
 
-
+![Login page](./client/public/img/README_img/login.jpeg)
+![Registration page](./client/public/img/README_img/registration.jpeg)
+![Search page](./client/public/img/README_img/search_page.jpeg)
+![Details page](./client/public/img/README_img/detail_page.jpeg)
 
 ---
 
