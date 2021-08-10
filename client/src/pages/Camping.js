@@ -44,7 +44,7 @@ export default function Campgrounds() {
     >
       <main>
         <div className="searchBar">
-          <p className="search">Keyword:</p>
+          <p className="search">Search for a Campsite |</p>
           <input
             onChange={(event) => {
               setSearchTerm(event.target.value);
@@ -65,7 +65,7 @@ export default function Campgrounds() {
                   </div>
                 );
               })
-            : "no results found"}
+            : ""}
         </div>
       </main>
     </div>

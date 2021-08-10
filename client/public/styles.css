@@ -116,26 +116,28 @@ img {
       margin-top: 5px;
       margin-bottom: 5px;
       width: 80%;
-      height: 700px;
+      height: 400px;
 
       margin-left: 10%;
 }
-  .parks{
-      display: block;
-      margin-top: 20px;
-      padding-top: 7px;
-      width: 80%;
-      height: 700px;
-      overflow-y: scroll;
-      background-color: rgba(255,255,255,0.5);
-      margin-left: 10%;
-  }
-  .searchBar{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+.parks{
+    display: block;
+    margin-top: 20px;
+    padding-top: 7px;
+    width: 80%;
+    height:400px;
+    overflow-y: hidden;
+    background-color: rgba(255,255,255,0.3);
+    margin-left: 10%;
+    border-radius: 25px;
   }
   .search{
       font-weight: bold;
       margin-top: 12px;
   }
+  .searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

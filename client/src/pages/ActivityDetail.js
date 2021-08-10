@@ -11,7 +11,7 @@ export default function ThingsToDoDetail(props) {
   });
 
   if (!thingsToDo) {
-    return <h1>Loading Your Activity Data....</h1>;
+    return <h1>Nothing was found</h1>;
   }
   return (
     <>

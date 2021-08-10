@@ -54,7 +54,7 @@ export default function Activities() {
     >
       <main>
         <div className="searchBar">
-          <p className="search">Keyword:</p>
+          <p className="search">Search for Activities |</p>
           <input
             onChange={(event) => {
               setSearchTerm(event.target.value);
@@ -83,7 +83,7 @@ export default function Activities() {
                   </div>
                 );
               })
-            : "no results found"}
+            : ""}
         </div>
       </main>
     </div>

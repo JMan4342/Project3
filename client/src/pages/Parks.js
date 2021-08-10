@@ -87,7 +87,7 @@ export default function Parks() {
     >
       <main>
         <div className="searchBar">
-          <p className="search">Keyword:</p>
+          <p className="search">National Parks |</p>
           <input
             onChange={(event) => {
               setSearchTerm(event.target.value);
