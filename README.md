@@ -48,7 +48,7 @@ To build a website that allows the user to plan a trip to a national park.
 
 ## Usage
 
-See the deployed version here! [Deployed link](####)
+See the deployed version here! [Deployed link](https://wander-beyond.herokuapp.com/)
 
 ![image](./client/public/img/favicon.ico)
 
@@ -92,6 +92,12 @@ Below are screenshots showing the application.
 - Scalable MongoDB: Joseph and Matthew
 - GraphQL API: Joseph and Matthew
 - Express.js and Node.js: Joseph and Matthew
+
+---
+
+## **Contribution**
+
+If you are looking to contribute the Wander Beyond app, you can find its repo at https://github.com/JMan4342/Wander_Beyond.
 
 ---
 
