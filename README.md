@@ -17,6 +17,8 @@
 
 * [TaskBreakdown](#taskbreakdown)
 
+* [Contribution](#contribution)
+
 * [Questions](#questions)
 
 * [Authors](#authors)
@@ -48,9 +50,7 @@ To build a website that allows the user to plan a trip to a national park.
 
 ## Usage
 
-See the deployed version here! [Deployed link](https://wander-beyond.herokuapp.com/)
-
-![image](./client/public/img/favicon.ico)
+See the deployed version here through Heroku! [Deployed link](https://wander-beyond.herokuapp.com/)
 
 ---
 

@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React
+// , { useState } 
+from "react";
 import tentImage from "./images/tent4.png"
 import Auth from '../../utils/auth';
 
@@ -11,7 +13,7 @@ export default function NavBar() {
   return (
 <nav className="navbar navbar-expand-sm navbar-light bg-light  ">
   <div className="container-fluid">
-    <a className="navbar-brand" >Wander Beyond</a>
+    <p className="navbar-brand" >Wander Beyond</p>
 
     <img className="tentImage"
 
@@ -41,7 +43,7 @@ export default function NavBar() {
         
         <li className="nav-item">
 
-          {Auth.loggedIn()  ?(<a className="nav-link" onClick={Auth.logout}>Logout</a>) : (<a className="nav-link" href="/login">Login</a>)}
+          {Auth.loggedIn()  ?(<a href="/login" className="nav-link" onClick={Auth.logout}>Logout</a>) : (<a className="nav-link" href="/login">Login</a>)}
         </li>
         <li className="nav-item">
           {/* <a className="nav-link" href="/register">Register </a> */}
