@@ -5,7 +5,7 @@ import { REMOVE_THINGSTODO } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
 const ThingsToDoList = ({ thingsToDos, isLoggedInUser = false }) => {
-  const [removeThingsToDo, { error }] = useMutation(REMOVE_THINGSTODO, {
+  const [{ error }] = useMutation(REMOVE_THINGSTODO, {
     update(cache, { data: { removeThingsToDo } }) {
       try {
         cache.writeQuery({
@@ -18,15 +18,15 @@ const ThingsToDoList = ({ thingsToDos, isLoggedInUser = false }) => {
     },
   });
 
-  const handleRemoveThingsToDo = async (thingsToDo) => {
-    try {
-      const { data } = await removeThingsToDo({
-        variables: { thingsToDo },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const handleRemoveThingsToDo = async (thingsToDo) => {
+  //   try {
+  //     const { data } = await removeThingsToDo({
+  //       variables: { thingsToDo },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   if (!thingsToDos.length) {
     return <h3>No Activities Added Yet</h3>;
@@ -44,7 +44,7 @@ const ThingsToDoList = ({ thingsToDos, isLoggedInUser = false }) => {
                   {isLoggedInUser && (
                     <button
                       className="btn btn-sm btn-danger ml-auto"
-                      onClick={() => handleRemoveThingsToDo(thingsToDo)}
+                      // onClick={() => handleRemoveThingsToDo(thingsToDo)}
                     >
                       X
                     </button>

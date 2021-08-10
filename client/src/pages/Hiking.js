@@ -1,7 +1,7 @@
 // import  Container  from "react-bootstrap/Container";
 import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { ADD_THINGSTODO } from "../utils/mutations";
+// import { useMutation } from "@apollo/client";
+// import { ADD_THINGSTODO } from "../utils/mutations";
 import { Link } from "react-router-dom";
 import { getThingsToDo } from "../utils/api";
 import Auth from "../utils/auth";
@@ -9,7 +9,7 @@ import Auth from "../utils/auth";
 export default function Activities() {
   const [searchTerm, setSearchTerm] = useState("");
   const [results, setResults] = useState([]);
-  const [addThingsToDo, { data }] = useMutation(ADD_THINGSTODO);
+  // const [addThingsToDo, { data }] = useMutation(ADD_THINGSTODO);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,7 +36,7 @@ export default function Activities() {
     if (!token) {
       return false;
     }
-    addThingsToDo({ variable: { id } });
+    // addThingsToDo({ variable: { id } });
     try {
     } catch (err) {
       console.error(err);

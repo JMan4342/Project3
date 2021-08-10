@@ -57,7 +57,7 @@ export default function Campgrounds() {
           {results.length
             ? results.map((res) => {
                 return (
-                  <div>
+                  <div key={res.id}>
                     {/* <Link to={`/camping/${res.data}`}></Link>{" "} */}
                     <Link to={`/campgrounds/${res.id}`}>
                       <h1>{res.name}</h1>

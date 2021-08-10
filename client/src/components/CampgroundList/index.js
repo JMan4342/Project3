@@ -5,7 +5,7 @@ import { REMOVE_CAMPGROUND } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
 const CampgroundList = ({ campgrounds, isLoggedInUser = false }) => {
-  const [removeCampground, { error }] = useMutation(REMOVE_CAMPGROUND, {
+  const [ { error }] = useMutation(REMOVE_CAMPGROUND, {
     update(cache, { data: { removeCampground } }) {
       try {
         cache.writeQuery({
@@ -18,15 +18,15 @@ const CampgroundList = ({ campgrounds, isLoggedInUser = false }) => {
     },
   });
 
-  const handleRemoveCampground = async (campground) => {
-    try {
-      const { data } = await removeCampground({
-        variables: { campground },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const handleRemoveCampground = async (campground) => {
+  //   try {
+  //     const { data } = await removeCampground({
+  //       variables: { campground },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   if (!campgrounds.length) {
     return <h3>No Campgrounds Added Yet</h3>;
@@ -44,7 +44,7 @@ const CampgroundList = ({ campgrounds, isLoggedInUser = false }) => {
                   {isLoggedInUser && (
                     <button
                       className="btn btn-sm btn-danger ml-auto"
-                      onClick={() => handleRemoveCampground(campground)}
+                      // onClick={() => handleRemoveCampground(campground)}
                     >
                       X
                     </button>

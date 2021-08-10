@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useMutation, useQuery } from "@apollo/client";
-import { ADD_PARK } from "../utils/mutations";
-import { QUERY_PARKS} from "../utils/queries";
+import React, { useState } from "react";
+import { useQuery } from "@apollo/client";
+// import { ADD_PARK } from "../utils/mutations";
+import { QUERY_PARKS } from "../utils/queries";
 import { Link } from "react-router-dom";
 import { getParks } from "../utils/api";
-import { getAlerts } from "../utils/api";
+// import { getAlerts } from "../utils/api";
 // import { saveParkCodes, getSavedParkCodes } from "../utils/localStorage";
 import Auth from "../utils/auth";
 
@@ -14,39 +14,25 @@ export default function Parks() {
   // const [addPark, { data }] = useMutation(ADD_PARK);
   // const [findParks,  parks ] = useQuery(QUERY_PARKS);
 
- 
-  const { loading, data } = useQuery(QUERY_PARKS);
+  const { data } = useQuery(QUERY_PARKS);
 
   const parks = data?.findParks || [];
 
-
   const handleSubmit = async (event) => {
-
-
-
     event.preventDefault();
 
-    const newParks = parks.filter(park =>{
+    const newParks = parks.filter((park) => {
+      console.log(park.fullName);
+      return park.fullName.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 
-      console.log(park.fullName)
-      return park.fullName.toLowerCase().includes(searchTerm.toLowerCase()) 
-    })
-     
-    console.log("graphql:",newParks)
+    console.log("graphql:", newParks);
 
     if (!searchTerm) {
       return false;
     }
 
     try {
-
-
-      
-
-
-    
-
-
       const response = await getParks(searchTerm);
       setResults(response.data);
       if (!response) {
@@ -66,9 +52,7 @@ export default function Parks() {
     }
     // addPark({ variables: { parkCode } });
     try {
-      {
-        throw new Error("something went wrong?");
-      }
+      throw new Error("something went wrong?");
 
       // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
     } catch (err) {
@@ -108,7 +92,7 @@ export default function Parks() {
                   </div>
                 );
               })
-            : "" }
+            : ""}
         </div>
       </main>
     </div>

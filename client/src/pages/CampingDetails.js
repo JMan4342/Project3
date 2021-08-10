@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getAlerts, getCampgroundsById, getParkByCode } from "../utils/api";
+import { getCampgroundsById } from "../utils/api";
 
 export default function CampgroundDetails(props) {
   const params = useParams();
   const [campground, setCampground] = useState({});
-  const [alerts, setAlerts] = useState([]);
+  // const [alerts, setAlerts] = useState([]);
   useEffect(() => {
     console.log(params)
     // retrieve details about our specific park
     getCampgroundsById(params.id).then(({ data }) => setCampground(data[0]));
     // retrieving the alerts for our specific park
-    getAlerts(params.id).then(({ data }) => setAlerts(data));
-  }, []);
+    // getAlerts(params.id).then(({ data }) => setAlerts(data));
+  }, [params]);
 
   if (!campground) {
     return <h1>Loading Campground Data....</h1>;

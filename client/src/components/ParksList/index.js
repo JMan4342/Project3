@@ -5,7 +5,7 @@ import { REMOVE_PARK } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
 const ParksList = ({ parks, isLoggedInUser = false }) => {
-  const [removePark, { error }] = useMutation(REMOVE_PARK, {
+  const [{ error }] = useMutation(REMOVE_PARK, {
     update(cache, { data: { removePark } }) {
       try {
         cache.writeQuery({
@@ -18,15 +18,15 @@ const ParksList = ({ parks, isLoggedInUser = false }) => {
     },
   });
 
-  const handleRemovePark = async (park) => {
-    try {
-      const { data } = await removePark({
-        variables: { park },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const handleRemovePark = async (park) => {
+  //   try {
+  //     const { data } = await removePark({
+  //       variables: { park },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   if (!parks.length) {
     return <h3>No Parks Added Yet</h3>;
@@ -44,7 +44,7 @@ const ParksList = ({ parks, isLoggedInUser = false }) => {
                   {isLoggedInUser && (
                     <button
                       className="btn btn-sm btn-danger ml-auto"
-                      onClick={() => handleRemovePark(park)}
+                      // onClick={() => handleRemovePark(park)}
                     >
                       X
                     </button>
