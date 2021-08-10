@@ -39,15 +39,6 @@ export default function Parks() {
     }
     addPark({ variables: { parkCode } });
     try {
-
-      const response = await savePark(parkToSave, token);
-
-      if (!response.ok) {
-        throw new Error("something went wrong?");
-      }
-
-      // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
-
     } catch (err) {
       console.error(err);
     }
