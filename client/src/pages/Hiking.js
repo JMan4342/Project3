@@ -1,4 +1,4 @@
-import  Container  from "react-bootstrap/Container";
+// import  Container  from "react-bootstrap/Container";
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_THINGSTODO } from "../utils/mutations";
@@ -53,39 +53,38 @@ export default function Activities() {
       }}
     >
       <main>
-      <div className="searchBar">
+        <div className="searchBar">
           <p className="search">Keyword:</p>
-        <input
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
-        
-        <button onClick={handleSubmit}>Search</button>
+          <input
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
 
-        {console.log(results)}
+          <button onClick={handleSubmit}>Search</button>
+
+          {console.log(results)}
         </div>
         <div className="parks">
-
-        {results.length
-          ? results.map((res) => {
-              return (
-                <div key={res.id}>
-                  <Link to={`/thingstodo/${res.id}`}>
-                    <h1>{res.title}</h1>
-                  </Link>
-                  <p>{res.relatedParks[0].fullName}</p>
-                  {/* Need to add logic so that you can't see the save button if the park has already been saved */}
-                  {Auth.loggedIn() && (
-                    <button onClick={() => handleSaveThingsToDo(res.id)}>
-                      Save
-                    </button>
-                  )}
-                </div>
-              );
-            })
-          : "no results found"}
-          </div>
+          {results.length
+            ? results.map((res) => {
+                return (
+                  <div key={res.id}>
+                    <Link to={`/thingstodo/${res.id}`}>
+                      <h1>{res.title}</h1>
+                    </Link>
+                    <p>{res.relatedParks[0].fullName}</p>
+                    {/* Need to add logic so that you can't see the save button if the park has already been saved */}
+                    {Auth.loggedIn() && (
+                      <button onClick={() => handleSaveThingsToDo(res.id)}>
+                        Save
+                      </button>
+                    )}
+                  </div>
+                );
+              })
+            : "no results found"}
+        </div>
       </main>
     </div>
   );

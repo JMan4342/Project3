@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_PARK } from "../utils/mutations";
 import { Link } from "react-router-dom";
-import { getParks, savePark } from "../utils/api";
+import { getParks } from "../utils/api";
 import { getAlerts } from "../utils/api";
 // import { saveParkCodes, getSavedParkCodes } from "../utils/localStorage";
 import Auth from "../utils/auth";
@@ -39,21 +39,14 @@ export default function Parks() {
     }
     addPark({ variables: { parkCode } });
     try {
-<<<<<<< HEAD
-=======
 
->>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
-      const response = await savePark(parkToSave, token);
-
-      if (!response.ok) {
+     
+ {
         throw new Error("something went wrong?");
       }
 
       // setSavedParkCodes([...savedParkCodes, parkToSave.parkCode]);
-<<<<<<< HEAD
-=======
 
->>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
     } catch (err) {
       console.error(err);
     }
@@ -69,10 +62,7 @@ export default function Parks() {
       }}
     >
       <main>
-<<<<<<< HEAD
-=======
 
->>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
         <div className="searchBar">
           <p className="search">Keyword:</p>
           <input
@@ -97,10 +87,7 @@ export default function Parks() {
               })
             : "no results found"}
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> a9f6b41d7d51ba9d2deddb4b4f5859bd154811eb
       </main>
     </div>
   );
