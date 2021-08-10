@@ -17,8 +17,9 @@ export default function ThingsToDoDetail(props) {
     <>
       <h1>{thingsToDo.title}</h1>
       <p>{thingsToDo.longDescription}</p>
-
+      <div className="parkFormat">
       <img
+          className="parkImg"
         src={
             thingsToDo.images
             ? thingsToDo.images[0].url
@@ -26,6 +27,7 @@ export default function ThingsToDoDetail(props) {
         }
         alt={thingsToDo.images ? thingsToDo.images[0].altText : "no image"}
       />
+    </div>
     </>
   );
 }

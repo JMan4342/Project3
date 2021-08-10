@@ -22,8 +22,9 @@ export default function CampgroundDetails(props) {
     <>
       <h1>{campground.name}</h1>
       <p>{campground.description}</p>
-
+      <div className="parkFormat">
       <img
+          className="parkImg"
         src={
           campground.images
             ? campground.images[0].url
@@ -31,6 +32,7 @@ export default function CampgroundDetails(props) {
         }
         alt={campground.images ? campground.images[0].altText : "no image"}
       />
+      </div>
     </>
   );
 }
