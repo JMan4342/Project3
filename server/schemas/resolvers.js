@@ -1,18 +1,23 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { Profile, Park } = require("../models");
 const { signToken } = require("../utils/auth");
-const { getParks, getAlerts, getThingsToDo, getCampgrounds } = require("../utils/api");
+const {
+  getParks,
+  getAlerts,
+  getThingsToDo,
+  getCampgrounds,
+} = require("../utils/api");
 
 const resolvers = {
   Query: {
     profiles: async () => {
       return await Profile.find();
     },
-    findParks:async(parent,{park})=>{
-     const parks = await getParks(park)
- console.log(parks)
-      const newParks = await Park.insertMany(parks.data)
-     return newParks;
+    findParks: async (parent, { park }) => {
+      const parks = await getParks(park);
+      console.log(parks);
+      const newParks = await Park.insertMany(parks.data);
+      return newParks;
     },
     profile: async (parent, { profileId }) => {
       return await Profile.findOne({ _id: profileId });

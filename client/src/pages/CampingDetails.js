@@ -7,10 +7,11 @@ export default function CampgroundDetails(props) {
   const [campground, setCampground] = useState({});
   const [alerts, setAlerts] = useState([]);
   useEffect(() => {
+    console.log(params)
     // retrieve details about our specific park
     getCampgroundsById(params.id).then(({ data }) => setCampground(data[0]));
     // retrieving the alerts for our specific park
-    getAlerts(params.parkCode).then(({ data }) => setAlerts(data));
+    getAlerts(params.id).then(({ data }) => setAlerts(data));
   }, []);
 
   if (!campground) {
