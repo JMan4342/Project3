@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const ADD_PROFILE = gql`
   mutation addProfile($name: String!, $email: String!, $password: String!) {
@@ -13,10 +13,9 @@ export const ADD_PROFILE = gql`
 `;
 
 export const ADD_PARK = gql`
-  mutation addPark($profileId: ID!, $park: String!) {
-    addPark(profileId: $profileId, park: $park) {
+  mutation addPark($parkCode: String!) {
+    addPark(parkCode: $parkCode) {
       _id
-      name
       parks
     }
   }
