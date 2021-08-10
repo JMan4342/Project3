@@ -15,11 +15,11 @@ import NavBar from "./components/Navbar/NavBar";
 const Login = lazy(() => import("./pages/Login"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Register = lazy(() => import("./pages/Register"));
-const Camping = lazy(() => import("./pages/Camping"));
-const CampingDetail = lazy(() => import("./pages/CampingDetails"));
+const Campgrounds = lazy(() => import("./pages/Camping"));
+const CampgroundDetail = lazy(() => import("./pages/CampingDetails"));
 const Parks = lazy(() => import("./pages/Parks"));
 const ParkDetail = lazy(() => import("./pages/ParkDetail"));
-const Supplies = lazy(() => import("./pages/Supplies"));
+// const Supplies = lazy(() => import("./pages/Supplies"));
 const Hiking = lazy(() => import("./pages/Hiking"));
 const ActivityDetail = lazy(() => import("./pages/ActivityDetail"));
 
@@ -67,11 +67,11 @@ export default class App extends Component {
                 <Route exact path="/register">
                   <Register />
                 </Route>
-                <Route exact path="/camping">
-                  <Camping />
+                <Route exact path="/campground">
+                  <Campgrounds />
                 </Route>
                 <Route exact path="/campgrounds/:id">
-                  <CampingDetail />
+                  <CampgroundDetail />
                 </Route>
                 <Route exact path="/parks">
                   <Parks />
