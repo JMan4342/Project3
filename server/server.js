@@ -41,7 +41,7 @@ app.get("/thingstodo", async function (req, res) {
   res.json(await getThingsToDo(req.query.q));
 });
 
-app.get("/camping", async function (req, res) {
+app.get("/campgrounds", async function (req, res) {
   console.log(req.query);
   res.json(await getCampgrounds(req.query.q));
 });

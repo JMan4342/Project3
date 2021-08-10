@@ -33,7 +33,7 @@ export default function NavBar() {
           <a className="nav-link" href="/parks">Parks</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/hiking">Hiking</a>
+          <a className="nav-link" href="/hiking">Activities</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/camping">Camping</a>

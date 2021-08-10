@@ -6,7 +6,7 @@ import { getCampgrounds } from "../utils/api";
 // ==DEVELOPING  CAMPING ROUTE === BROKEN==
 // ============================================
 
-export default function Camping() {
+export default function Campgrounds() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [results, setResults] = useState([]);
